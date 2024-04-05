@@ -1,0 +1,99 @@
+@use "global" as *;
+
+.point-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(28) rem(23);
+  border: 2px solid $blue;
+  border-radius: 20px;
+  height: 100%;
+  position: relative;
+  @include mq("md") {
+    border-bottom: initial;
+    padding: rem(8) rem(34) rem(15);
+    padding-inline: calc(34 / 1400 * 100vw);
+  }
+}
+
+.point-item__head {
+  height: rem(80);
+}
+
+.point-item__num {
+  position: absolute;
+  top: rem(-50);
+  left: 0;
+  background-color: $blue;
+  border-radius: 50%;
+  font-size: rem(19);
+  font-weight: $bold;
+  font-family: $second-font;
+  color: $white;
+  line-height: 1;
+  padding-block: rem(20);
+  padding-inline: rem(20);
+  @include mq("md") {
+    font-size: rem(21);
+  }
+}
+
+.point-item__num::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: rem(40);
+  height: rem(40);
+  background-color: $blue;
+  z-index: -1;
+}
+
+.point-item__num span {
+  display: block;
+  text-align: center;
+  font-size: rem(30);
+  color: $yellow;
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
+
+.point-item__img {
+  // width: rem(92);
+  // height: rem(62);
+  display: grid;
+  align-items: center;
+}
+
+.point-item__img img {
+  // aspect-ratio: 92/62;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// .point-item__img:last-child img {
+//   object-position: left;
+// }
+
+.point-item__title {
+  margin-top: rem(10);
+  font-size: rem(18);
+  font-weight: $bold;
+  font-family: $second-font;
+  line-height: calc(26 / 18);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(19);
+    line-height: calc(27 / 19);
+  }
+}
+
+.point-item__text {
+  margin-top: rem(14);
+  font-size: rem(14);
+  line-height: calc(27 / 14);
+  flex-grow: 1;
+  text-align: justify;
+}

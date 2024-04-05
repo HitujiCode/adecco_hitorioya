@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.head {
+  position: relative;
+  font-size: rem(18);
+  font-weight: $bold;
+  font-family: $second-font;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  padding-left: rem(13);
+  @include mq("md") {
+    font-size: rem(35);
+    letter-spacing: 0.15em;
+    padding-left: rem(25);
+  }
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(5);
+  height: rem(17);
+  background-color: currentColor;
+  border-radius: 3px;
+  @include mq("md") {
+    height: rem(31);
+  }
+}

@@ -1,0 +1,203 @@
+@use "global" as *;
+
+.course-item {
+  display: block;
+  padding: rem(18) rem(17);
+  background-color: $white;
+  border-radius: 0 0 10px 10px;
+  border-top: 4px solid $blue;
+  position: relative;
+  @include mq("md") {
+    padding: rem(25) rem(30);
+    transition: background-color 0.3s;
+  }
+}
+
+.course-item__label {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  background-color: $yellow;
+  border: 2px solid $black;
+  border-radius: 17px;
+  padding-top: rem(3);
+  padding-bottom: rem(3);
+  padding-inline: rem(12);
+  font-size: rem(9);
+  font-weight: $bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    font-size: 12px;
+  }
+}
+
+.course-item__label-num {
+  font-size: rem(21);
+  color: $blue;
+  @include mq("md") {
+    font-size: rem(25);
+  }
+}
+
+.course-item__label-color {
+  font-size: rem(13);
+  color: $blue;
+  @include mq("md") {
+    font-size: clamp(12px, calc(15 / 1400 * 100vw), 15px);
+  }
+}
+
+.course-item__head {
+  text-align: center;
+  font-size: rem(17);
+  font-weight: $bold;
+  font-family: $second-font;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  @include mq("md") {
+    font-size: rem(20);
+  }
+}
+
+.course-item__img {
+  margin-top: rem(13);
+  @include mq("md") {
+    margin-top: rem(15);
+  }
+}
+
+.course-item__img img {
+  border-radius: 10px;
+  aspect-ratio: 310/172;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 361/200;
+  }
+}
+
+.course-item__job {
+  margin-top: rem(13);
+  font-size: rem(12);
+  font-weight: $bold;
+  color: $blue;
+  line-height: calc(17 / 12);
+  text-align: center;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  @include mq("md") {
+    margin-top: rem(20);
+    font-size: 13px;
+  }
+}
+
+.course-item__read {
+  margin-top: rem(7);
+  font-size: rem(15);
+  font-weight: $bold;
+  line-height: calc(22 / 15);
+  text-align: center;
+  @include mq("md") {
+    font-size: 16px;
+  }
+}
+
+.course-item__bottom {
+  margin-top: rem(16);
+  padding-top: rem(16);
+  border-top: 1px solid $lightgray2;
+  display: flex;
+  gap: rem(12);
+  @include mq("md") {
+    margin-top: rem(20);
+    padding-top: rem(20);
+  }
+}
+
+.course-item__list {
+  padding-right: rem(60);
+  flex: 1;
+  position: relative;
+}
+
+.course-item__list::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: rem(41);
+  aspect-ratio: 1;
+  background-image: url(../../assets/images/icon-arrow-blue.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.course-item__item {
+  position: relative;
+  padding-left: rem(12);
+  font-size: rem(14);
+  line-height: calc(25 / 14);
+  @include mq("md") {
+    font-size: 14px;
+  }
+}
+
+.course-item__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(6);
+  aspect-ratio: 1;
+  background-color: $blue;
+  border-radius: 50%;
+}
+
+.course-item__icon {
+  width: rem(41);
+  @include mq("md") {
+    width: rem(48);
+  }
+}
+
+.course-item__icon img {
+  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.course-item--rose {
+  @extend .course-item;
+  border-top-color: $rose;
+}
+
+.course-item--rose .course-item__label-num,
+.course-item--rose .course-item__label-color,
+.course-item--rose .course-item__job {
+  color: $rose;
+}
+
+.course-item--rose .course-item__list::after {
+  background-image: url(../../assets/images/icon-arrow-rose.svg);
+}
+
+.course-item--rose .course-item__item::before {
+  background-color: $rose;
+}
+
+@media (any-hover: hover) {
+  .course-item:hover {
+    // background-color: $bg-offwhite;
+  }
+
+  .course-item:hover .course-item__foot-button a {
+    opacity: 1;
+  }
+}

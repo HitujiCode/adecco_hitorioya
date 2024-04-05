@@ -1,0 +1,13 @@
+<svg id="グループ_634" data-name="グループ 634" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41.323" height="41.323" viewBox="0 0 41.323 41.323">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_141" data-name="長方形 141" width="16.023" height="9.208" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <ellipse id="楕円形_12" data-name="楕円形 12" cx="20.661" cy="20.661" rx="20.661" ry="20.661" fill="#00b7db"/>
+  <g id="グループ_444" data-name="グループ 444" transform="translate(15.708 28.673) rotate(-90)">
+    <g id="グループ_386" data-name="グループ 386" clip-path="url(#clip-path)">
+      <path id="パス_792" data-name="パス 792" d="M8.079,6.446c.1-.118.173-.222.261-.31q2.846-2.85,5.694-5.7A1.106,1.106,0,0,1,15.192.123a1.089,1.089,0,0,1,.8.86,1.114,1.114,0,0,1-.338,1.08L13.484,4.235l-4.5,4.5a1.18,1.18,0,0,1-1.9,0Q3.75,5.39.408,2.046A1.163,1.163,0,0,1,.584.148,1.166,1.166,0,0,1,2.011.386Q3.358,1.725,4.7,3.073L7.855,6.238c.056.056.116.108.224.209" transform="translate(0 0)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

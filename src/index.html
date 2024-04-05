@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="robots" content="noindex" />
   <!-- meta情報 -->
-  <title>CodeUps</title>
+  <title>ひとり親向け｜オンライン訓練・就活支援事業
+  </title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <!-- ogp -->
@@ -17,23 +19,237 @@
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
   <!-- ファビコン -->
-  <link rel="”icon”" href="" />
+  <!-- <link rel="”icon”" href="" /> -->
+  <!-- GoogleFonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@700&display=swap"
+    rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
-<body>
-  <header>
 
+<body>
+  <header class="header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="#">
+          <img src="./assets/images/logo.svg" alt="ひとり親向け｜オンライン訓練・就活支援事業" width="" height="" /></a>
+      </h1>
+      <div class="header__banners">
+        <div class="header__banner01">
+          <a href="#">
+            <img src="./assets/images/banner01.svg" alt="東京都" width="55" height="14" />
+          </a>
+        </div>
+        <div class="header__banner02">
+          <a href="#">
+            <picture>
+              <source srcset="./assets/images/banner02@3x.webp" type="image/webp">
+              <img src="./assets/images/banner02@3x.png" alt="公共財団法人東京しごと財団" width="62" height="14" />
+            </picture>
+          </a>
+        </div>
+        <div class="header__banner03">
+          <a href="#">
+            <picture>
+              <source srcset="./assets/images/banner03@3x.webp" type="image/webp">
+              <img src="./assets/images/banner03@3x.png" alt="東京しごとセンター" width="62" height="10" />
+            </picture>
+          </a>
+        </div>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="#"><span>ホーム</span></a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#"><span>事業概要</span></a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">サポート</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">よくあるご質問</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">コース紹介</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">対象支援者の声</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">申込条件</a>
+          </li>
+        </ul>
+        <div class="header__nav-contact">
+          <a href="#">お問い合わせ</a>
+        </div>
+      </nav>
+      <button class="header__hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="header__drawer js-drawer">
+      <div class="header__drawer-wrap">
+        <nav class="header__drawer-nav">
+          <ul class="header__drawer-list">
+            <li class="header__drawer-item">
+              <a href="#">ホーム</a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">事業概要</a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">サポート</a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">受講の流れ</a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">よくあるご質問</a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">コース紹介</a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">支援対象者の声</a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">申込条件</a>
+            </li>
+            <li class="header__drawer-item">
+              <a href="#">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
   <main>
     <div class="inner">
-      <p class="test">変更のテスト</p>
+
+
+      <hgroup class="section-head">
+        <h2 class="section-head__main">新着情報</h2>
+        <p class="section-head__sub">News</p>
+      </hgroup>
+
+      <hgroup class="section-head--vertical">
+        <h2 class="section-head__main">当事業のポイント</h2>
+        <p class="section-head__sub">Point</p>
+      </hgroup>
+
+      <a class="news-item" href="#">
+        <div class="news-item__wrap">
+          <time class="news-item__data" datetime="2023-12-26">2023.12.26</time>
+          <span class="news-item__tag">new</span>
+        </div>
+        <p class="news-item__title">「デジタルクリエイター科」は後期募集終了いたしました。</p>
+      </a>
+
+      <div class="point-item">
+        <div class="point-item__head">
+          <p class="point-item__num">Point<span>01</span></p>
+          <div class="point-item__img">
+            <img src="./assets/images/point01.svg" alt="" width="" height="" loading="lazy" />
+          </div>
+        </div>
+        <h3 class="point-item__title">すき間時間を活かして学べる<br>eラーニング</h3>
+        <p class="point-item__text">家事の合間や移動中などの貴重なすき間時間を活かして学ぶことができます。パソコンやスマホで受講可能なので、いつでもどこでも自分のペースで学習を進めることができます。
+        </p>
+      </div>
+
+      <h3 class="course-head">デジタルコース</h3>
+
+      <a href="#" class="course-item--rose">
+        <p class="course-item__label">
+          後期
+          <span class="course-item__label-num">65</span>
+          <span class="course-item__label-color">名</span>
+          予定
+        </p>
+        <h4 class="course-item__head">
+          ITエンジニア科
+        </h4>
+        <div class="course-item__img">
+          <picture>
+            <source srcset="./assets/images/course01.webp" type="image/webp">
+            <img src="./assets/images/course01.jpg" alt="" width="" height="" />
+          </picture>
+        </div>
+        <p class="course-item__job">WEBデザイナー／WEB開発／WEBプログラミング<wbr>イラストレーター／グラフィックデザイナー</p>
+        <p class="course-item__read">未経験でもチャレンジできる！<br>Web制作やグラフィックデザインの<br>スキルを身につけよう！</p>
+        <div class="course-item__bottom">
+          <ul class="course-item__list">
+            <li class="course-item__item">プログラミングを学びたい </li>
+            <li class="course-item__item">システムエンジニアを目指したい</li>
+            <li class="course-item__item">実践的なITスキルを身につけたい</li>
+          </ul>
+        </div>
+      </a>
+
+      <ul class="flow-list">
+        <li class="flow-list__item">
+          <div class="flow-item">
+            <div class="flow-item__img">
+              <picture>
+                <source srcset="./assets/images/flow01@2x.webp" type="image/webp">
+                <img src="./assets/images/flow01@2x.png" alt="" width="" height="" />
+              </picture>
+            </div>
+            <div class="flow-item__body">
+              <p class="flow-item__num">0</p>
+              <div class="flow-item__wrap">
+                <h3 class="flow-item__head">簡単入力で日程調整</h3>
+                <p class="flow-item__text">お申し込みフォームから必要な情報を入力し、面談日程をご選択ください。</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="interview-item">
+        <div class="interview-item__user">
+          <div class="interview-item__img">
+            <img src="./assets/images/dammy.png" alt="" width="" height="" loading="lazy" />
+          </div>
+          <div class="interview-item__names">
+            <p class="interview-item__name">A・A<span class="interview-item__name-small">さん</span></p>
+            <p class="interview-item__sex">女性</p>
+          </div>
+        </div>
+        <div class="interview-item__body">
+          <div class="interview-item__courses">
+            <p class="interview-item__course">受講コース</p>
+            <p class="interview-item__class">○○科受講</p>
+          </div>
+          <p class="interview-item__text text">
+            説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります
+          </p>
+          <div class="interview-item__button">
+            <a href="#" class="button"><span>詳細はこちら</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recruit-item">
+        <h3 class="recruit-item__head">大手システム開発企業、ITエンジニア</h3>
+        <ul class="recruit-item__list">
+          <li class="recruit-item__item">約5～6割が在宅勤務／年休126日</li>
+          <li class="recruit-item__item">昨年度賞与3.3～4.5ヶ月</li>
+        </ul>
+      </div>
     </div>
   </main>
-  <footer>
+  <footer style="height: 100px;">
 
   </footer>
 </body>

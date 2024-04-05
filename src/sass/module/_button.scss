@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.button {
+  display: inline-block;
+  padding-block: rem(12);
+  font-size: rem(17);
+  font-weight: $semi-bold;
+  line-height: 1;
+  text-align: center;
+  color: $rose;
+  background-color: $beige;
+  border-radius: 30px;
+  max-width: rem(345);
+  width: 100%;
+  transition: background-color 0.3s color 0.3s;
+  @include mq("md") {
+    padding: rem(15) rem(27);
+    font-size: rem(18);
+    max-width: fit-content;
+  }
+}
+
+.button span {
+  display: inline-block;
+  align-items: center;
+  padding-right: rem(15);
+  position: relative;
+}
+
+.button span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: rem(6);
+  height: rem(11);
+  background-image: url(../../assets/images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

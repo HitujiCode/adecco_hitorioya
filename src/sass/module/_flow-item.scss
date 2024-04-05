@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.flow-list {
+  counter-reset: flowNum;
+}
+
+.flow-list__item {
+  counter-increment: flowNum;
+}
+
+.flow-item {
+  position: relative;
+  @include mq("md") {
+    display: flex;
+    padding-left: rem(135);
+  }
+}
+
+.flow-item__img {
+  width: rem(173);
+  margin-inline: auto;
+  z-index: 1;
+  position: relative;
+  @include mq("md") {
+    width: rem(150);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.flow-item__img img {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flow-item__body {
+  margin-top: rem(-8);
+  padding: rem(20) rem(18);
+  border: 2px solid currentColor;
+  border-radius: 10px;
+  background-color: $beige;
+  display: flex;
+  gap: rem(18);
+  position: relative;
+  @include mq("md") {
+    z-index: 1;
+    width: 100%;
+  }
+}
+
+.flow-item__body::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(23);
+  height: rem(18);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background-color: $black;
+  background-color: currentColor;
+}
+
+.flow-item__num {
+  font-size: rem(52);
+  font-weight: $bold;
+  font-family: $second-font;
+  line-height: 1;
+  border-right: 2px solid currentColor;
+  display: flex;
+  align-items: center;
+  width: rem(68);
+  @include mq("md") {
+    font-size: rem(64);
+    width: rem(90);
+  }
+}
+
+.flow-item__num::after {
+  content: counter(flowNum);
+}
+
+.flow-item__wrap {
+  flex: 1;
+  // width: calc(224 / 308 * 100%);
+}
+
+.flow-item__head {
+  font-size: rem(17);
+  font-weight: $bold;
+  font-family: $second-font;
+  line-height: calc(25 / 17);
+  @include mq("md") {
+    font-size: rem(20);
+    line-height: calc(29 / 20);
+  }
+}
+
+.flow-item__text {
+  margin-top: rem(10);
+  font-size: rem(14);
+  line-height: 2;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
