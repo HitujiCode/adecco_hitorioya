@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.reception-table {
+  border-collapse: collapse;
+  width: 100%;
+  border-block: 3px solid $blue;
+  background-color: $white;
+}
+
+.reception-table tr:not(:first-child) {
+  border-top: 1px solid $blue;
+}
+
+.reception-table th,
+.reception-table td {
+  line-height: 1;
+  text-align: center;
+  padding: rem(13) 0;
+  @include mq("md") {
+    padding-top: rem(16);
+    padding-bottom: rem(15);
+  }
+}
+
+.reception-table th:nth-child(1),
+.reception-table td:nth-child(1) {
+  border-right: 1px solid $blue;
+  width: calc(100 / 345 * 100%);
+  @include mq("md") {
+    width: calc(126 / 485 * 100%);
+  }
+}
+
+.reception-table th {
+  font-size: rem(14);
+  padding-block: rem(11);
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.reception-table td {
+  font-size: rem(12);
+  font-weight: $bold;
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.reception-table td:nth-child(1) {
+  font-size: rem(13);
+  font-weight: $medium;
+  @include mq("md") {
+    font-size: rem(17);
+  }
+}
+
+.reception-table th:nth-child(2),
+.reception-table td:nth-child(2) {
+  @include mq("md") {
+    padding-left: rem(12);
+    width: calc(64.5 / 485 * 100%);
+  }
+}
+
+.reception-table th:nth-child(8),
+.reception-table td:nth-child(8) {
+  @include mq("md") {
+    padding-right: rem(12);
+    width: calc(64.5 / 485 * 100%);
+  }
+}

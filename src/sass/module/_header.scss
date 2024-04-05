@@ -215,14 +215,9 @@
   height: inherit;
   aspect-ratio: 1;
   background-color: $blue;
-  transition: 0.3s;
   @include mq("md") {
     display: none;
   }
-}
-
-.header__hamburger.is-open {
-  background-color: transparent;
 }
 
 .header__hamburger span {
@@ -233,7 +228,10 @@
   width: rem(28);
   height: 3px;
   background-color: $white;
-  transition: 0.5s;
+  transition:
+    transform 0.5s,
+    top 0.5s,
+    width 0.5s;
 }
 
 .header__hamburger span:nth-of-type(1) {
@@ -251,6 +249,7 @@
 .header__hamburger.is-open span:nth-of-type(1) {
   top: rem(3);
   transform: translateX(-50%) rotate(33deg);
+  width: rem(34);
 }
 
 .header__hamburger.is-open span:nth-of-type(2) {
@@ -260,6 +259,7 @@
 .header__hamburger.is-open span:nth-of-type(3) {
   top: rem(-3);
   transform: translateX(-50%) rotate(-33deg);
+  width: rem(34);
 }
 
 .header__drawer {
@@ -290,8 +290,9 @@
 
 .header__drawer-nav {
   height: fit-content;
-  padding: rem(15);
-  // background-color: $offwhite;
+  padding-top: rem(22);
+  padding-bottom: rem(27);
+  background-color: $lightaqua;
 }
 
 .header__drawer-list {
@@ -310,9 +311,12 @@
   padding: rem(15) 0;
   display: block;
   font-size: rem(15);
+  font-weight: $medium;
+  font-family: $second-font;
   line-height: 1;
   text-align: center;
   background-color: $white;
+  border-radius: 23px;
   filter: drop-shadow(0 0 4px #00000029);
 }
 
@@ -320,14 +324,27 @@
   content: "";
   position: absolute;
   top: 50%;
-  right: rem(17);
+  right: rem(22);
   transform: translateY(-50%);
-  width: rem(10);
-  height: rem(10);
+  width: rem(7);
+  height: rem(11);
   background-image: url(../../assets/images/icon-arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.header__drawer-item--contact {
+  @extend .header__drawer-item;
+}
+
+.header__drawer-item--contact a {
+  background-color: $rose;
+  color: $white;
+}
+
+.header__drawer-item--contact a::after {
+  filter: brightness(0) invert(1);
 }
 
 .header__drawer-item + .header__drawer-item {

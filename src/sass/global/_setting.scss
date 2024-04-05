@@ -55,3 +55,8 @@ body {
   font-weight: $regular;
   color: $black;
 }
+
+body.is-fixed {
+  position: fixed;
+  inset: 0;
+}
