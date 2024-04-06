@@ -40,3 +40,23 @@
   background-position: center;
   background-size: contain;
 }
+
+.button--entry {
+  @extend .button;
+  background-color: $rose;
+  font-size: rem(18);
+  font-weight: $bold;
+  font-family: $second-font;
+  max-width: rem(280);
+  padding-block: rem(16);
+}
+
+.button--entry span {
+  color: $white;
+}
+
+.button--entry span::after {
+  filter: brightness(0) invert(1);
+  width: rem(8);
+  height: rem(14);
+}

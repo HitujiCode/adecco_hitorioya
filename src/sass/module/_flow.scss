@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.flow {
+}
+
+.flow__inner.inner--small {
+}
+
+.flow__container {
+}
+
+.flow__head {
+}
+
+.flow__list {
+  counter-reset: flowNum;
+  margin-top: rem(30);
+}
+
+.flow__item {
+  counter-increment: flowNum;
+  position: relative;
+}
+
+.flow__item + .flow__item {
+  margin-top: rem(40);
+}

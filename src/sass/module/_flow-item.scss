@@ -1,13 +1,5 @@
 @use "global" as *;
 
-.flow-list {
-  counter-reset: flowNum;
-}
-
-.flow-list__item {
-  counter-increment: flowNum;
-}
-
 .flow-item {
   position: relative;
   @include mq("md") {
@@ -39,8 +31,8 @@
 }
 
 .flow-item__body {
-  margin-top: rem(-8);
-  padding: rem(20) rem(18);
+  margin-top: rem(-12);
+  padding: rem(20) rem(16);
   border: 2px solid currentColor;
   border-radius: 10px;
   background-color: $beige;
@@ -53,7 +45,7 @@
   }
 }
 
-.flow-item__body::after {
+.flow__item:not(:last-child) .flow-item__body::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -74,7 +66,7 @@
   border-right: 2px solid currentColor;
   display: flex;
   align-items: center;
-  width: rem(68);
+  width: rem(65);
   @include mq("md") {
     font-size: rem(64);
     width: rem(90);
@@ -102,7 +94,7 @@
 }
 
 .flow-item__text {
-  margin-top: rem(10);
+  margin-top: rem(5);
   font-size: rem(14);
   line-height: 2;
   @include mq("md") {

@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.news {
+  background-color: $beige;
+}
+
+.news__inner.inner {
+}
+
+.news__container {
+  @include mq("md") {
+    display: flex;
+    gap: rem(50);
+  }
+}
+
+.news__head {
+  @include mq("md") {
+    justify-content: flex-start;
+    padding-top: rem(16);
+  }
+}
+
+.news__link {
+  margin-top: rem(20);
+  text-align: right;
+  line-height: 1;
+}
+
+.news__link a {
+  position: relative;
+  padding-right: rem(13);
+  font-size: rem(12);
+  font-weight: $bold;
+  font-family: $second-font;
+  color: $rose;
+  line-height: 1;
+  display: inline-block;
+}
+
+.news__link a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: rem(4);
+  height: rem(7);
+  background-image: url("../../assets/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.news__list {
+  margin-top: rem(8);
+  padding-top: rem(6);
+  padding-inline: rem(15);
+  padding-bottom: rem(10);
+  background-color: $white;
+  border-radius: 15px;
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.news__list-item {
+  padding-block: rem(10);
+  @include mq("md") {
+    padding-block: rem(15);
+  }
+}
+
+.news__list-item:not(:last-child) {
+  border-bottom: 2px solid $lightgray;
+}

@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.recruit {
+  background-color: $lightaqua;
+  border-top: 3px solid $blue;
+}
+
+.recruit__inner.inner--small {
+}
+
+.recruit__container {
+}
+
+.recruit__info {
+}
+
+.recruit__head {
+}
+
+.recruit__text {
+  margin-top: rem(30);
+  font-size: rem(15);
+  line-height: 2;
+  text-align: justify;
+}
+
+.recruit__list {
+  margin-top: rem(25);
+  display: grid;
+  gap: rem(15);
+  @include mq("md") {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(22);
+  }
+}
+
+.recruit__item {
+}
+
+.recruit__button {
+  margin-top: rem(40);
+  text-align: center;
+}

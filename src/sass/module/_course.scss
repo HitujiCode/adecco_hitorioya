@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.course {
+  background-color: $beige;
+}
+
+.course__inner.inner {
+}
+
+.course__container {
+}
+
+.course__head {
+}
+
+.course__content {
+  margin-top: rem(45);
+}
+
+.course__list {
+  margin-top: rem(50);
+  display: grid;
+  gap: rem(36);
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.course__item {
+}
+
+.course__button {
+  margin-top: rem(40);
+  text-align: center;
+}

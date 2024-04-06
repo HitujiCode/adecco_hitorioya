@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.condtions {
+}
+
+.condtions__inner.inner--small {
+}
+
+.condtions__container {
+}
+
+.condtions__head {
+}
+
+.condtions__info {
+  margin-top: rem(30);
+}
+
+.condtions__text,
+.condtions__item {
+  font-size: rem(15);
+  line-height: 2;
+}
+
+.condtions__text {
+  font-weight: $bold;
+}
+
+.condtions__list {
+}
+
+.condtions__item {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.condtions__item span {
+  display: inline-block;
+}
+
+.condtions__movie {
+  margin-top: rem(30);
+  border: rem(6) solid $white;
+  border-radius: 10px;
+}
+
+.condtions__movie video {
+  border-radius: rem(3);
+  aspect-ratio: 346/192;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

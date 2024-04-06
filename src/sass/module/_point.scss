@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.point {
+}
+
+.point__inner.inner {
+}
+
+.point__container {
+}
+
+.point__head {
+  display: flex;
+  justify-content: center;
+}
+
+.point__list {
+  margin-top: rem(58);
+  counter-reset: pointNum;
+  display: grid;
+  gap: rem(40);
+  @include mq("md") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.point__item {
+  counter-increment: pointNum;
+}

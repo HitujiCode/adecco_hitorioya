@@ -4,11 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: rem(28) rem(23);
+  padding: rem(24) rem(23);
   border: 2px solid $blue;
   border-radius: 20px;
   height: 100%;
   position: relative;
+  background-color: $white;
   @include mq("md") {
     border-bottom: initial;
     padding: rem(8) rem(34) rem(15);
@@ -17,13 +18,15 @@
 }
 
 .point-item__head {
-  height: rem(80);
+  @include mq("md") {
+    height: rem(80);
+  }
 }
 
 .point-item__num {
   position: absolute;
-  top: rem(-50);
-  left: 0;
+  top: rem(-30);
+  left: rem(-2);
   background-color: $blue;
   border-radius: 50%;
   font-size: rem(19);
@@ -31,8 +34,10 @@
   font-family: $second-font;
   color: $white;
   line-height: 1;
-  padding-block: rem(20);
+  padding-block: rem(18);
   padding-inline: rem(20);
+  width: rem(87);
+  height: rem(84);
   @include mq("md") {
     font-size: rem(21);
   }
@@ -47,6 +52,10 @@
   height: rem(40);
   background-color: $blue;
   z-index: -1;
+  @include mq("md") {
+    width: rem(40);
+    height: rem(40);
+  }
 }
 
 .point-item__num span {
@@ -57,6 +66,10 @@
   @include mq("md") {
     font-size: rem(32);
   }
+}
+
+.point-item__num span::after {
+  content: counter(pointNum);
 }
 
 .point-item__img {
@@ -78,7 +91,6 @@
 // }
 
 .point-item__title {
-  margin-top: rem(10);
   font-size: rem(18);
   font-weight: $bold;
   font-family: $second-font;
@@ -88,6 +100,14 @@
     margin-top: rem(19);
     line-height: calc(27 / 19);
   }
+}
+
+.point__list > .point__item:nth-child(odd) .point-item__title {
+  margin-top: rem(25);
+}
+
+.point__list > .point__item:nth-child(even) .point-item__title {
+  margin-top: rem(12);
 }
 
 .point-item__text {
