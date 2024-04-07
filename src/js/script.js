@@ -44,4 +44,6 @@ jQuery(function ($) {
     $(this).next().slideToggle();
     $(this).toggleClass("is-open");
   });
+
+  // スムーススクロール
 });

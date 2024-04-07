@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.cta {
+  position: fixed;
+  bottom: 0;
+  right: rem(10);
+  z-index: $cta;
+  width: rem(164);
+  height: rem(84);
+}
+
+.cta a {
+  display: inline-block;
+  font-size: rem(19);
+  font-family: $second-font;
+  color: $white;
+  line-height: calc(20 / 19);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  height: inherit;
+  padding-bottom: rem(8);
+  clip-path: circle(62% at 50% 100%);
+  background-color: $rose;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  top: rem(-15);
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(48);
+  aspect-ratio: 1;
+  background-image: url("../../assets/images/icon-note.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 3px solid $rose;
+  border-radius: 50%;
+  z-index: 1;
+}

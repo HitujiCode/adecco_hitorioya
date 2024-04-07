@@ -4,7 +4,7 @@
   position: relative;
   @include mq("md") {
     display: flex;
-    padding-left: rem(135);
+    padding-left: rem(132);
   }
 }
 
@@ -42,6 +42,8 @@
   @include mq("md") {
     z-index: 1;
     width: 100%;
+    border-radius: 20px;
+    padding-right: rem(34);
   }
 }
 
@@ -63,13 +65,16 @@
   font-weight: $bold;
   font-family: $second-font;
   line-height: 1;
-  border-right: 2px solid currentColor;
   display: flex;
   align-items: center;
   width: rem(65);
   @include mq("md") {
     font-size: rem(64);
-    width: rem(90);
+    width: rem(82);
+    justify-content: center;
+    position: relative;
+    top: rem(-5);
+    left: rem(7);
   }
 }
 
@@ -79,7 +84,8 @@
 
 .flow-item__wrap {
   flex: 1;
-  // width: calc(224 / 308 * 100%);
+  border-left: 2px solid currentColor;
+  padding-left: rem(25);
 }
 
 .flow-item__head {

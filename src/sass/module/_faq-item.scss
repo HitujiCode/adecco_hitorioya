@@ -10,64 +10,77 @@
 .faq-item__question {
   font-size: rem(15);
   font-weight: $bold;
+  font-family: $second-font;
   line-height: 2;
   position: relative;
-  padding-bottom: rem(15);
   border-bottom: 2px dashed $aqua;
-  text-indent: rem(-36);
+  padding-left: rem(30);
+  padding-right: rem(30);
+  padding-bottom: rem(10);
   cursor: pointer;
+  letter-spacing: -0.02em;
   @include mq(md) {
+    font-size: rem(22);
+    line-height: calc(43 / 22);
+    letter-spacing: initial;
+    padding-left: rem(36);
+    padding-bottom: rem(16);
   }
 }
 
-.faq-item__question::before,
+.faq-item__question::before {
+  content: "Q";
+  position: absolute;
+  top: rem(-2);
+  left: rem(2);
+  font-size: rem(29);
+  font-weight: $bold;
+  color: $rose;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(31);
+    top: rem(4);
+  }
+}
+
 .faq-item__question::after {
   content: "";
   position: absolute;
-  top: rem(21);
-  right: rem(20);
-  width: rem(18);
-  height: rem(3);
-  transition: 0.3s;
+  top: 0;
+  right: 0;
+  width: rem(26);
+  aspect-ratio: 1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  @include mq(md) {
-    top: rem(24);
-    width: rem(20);
-  }
-}
-
-.faq-item__question::after {
+  transition: 0.3s;
   transform: rotate(90deg);
   background-image: url("../../assets/images/icon-plus.svg");
+  @include mq("md") {
+    width: rem(39);
+    top: rem(4);
+  }
 }
 
 .faq-item__question.is-open::after {
   transform: rotate(0deg);
+  background-image: url("../../assets/images/icon-minus.svg");
 }
 
 .faq-item__question span {
-  margin-right: rem(20);
   display: inline-block;
-  color: #f6d970;
 }
 
 .faq-item__answer {
-  padding: rem(15) rem(30) rem(15) rem(60);
   display: none;
-  font-size: rem(15);
-  text-indent: rem(-20);
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: calc(30 / 14);
   @include mq(md) {
-    padding: rem(20) rem(40) rem(15) rem(80);
+    margin-top: rem(10);
     font-size: rem(18);
+    line-height: calc(30 / 18);
   }
-}
-
-.faq-item__answer span {
-  margin-right: rem(20);
-  display: inline-block;
-  color: #de8430;
 }
 
 .faq-item:first-child .faq-item__answer {

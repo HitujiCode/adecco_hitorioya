@@ -3,4 +3,8 @@
 .layout-recruit {
   padding-top: rem(30);
   padding-bottom: rem(50);
+  @include mq("md") {
+    padding-top: rem(60);
+    padding-bottom: rem(70);
+  }
 }

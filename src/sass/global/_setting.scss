@@ -50,6 +50,14 @@ $hamburger: 900;
 $drawer: 700;
 $cta: 600;
 
+html {
+  // scroll-behavior: smooth;
+  // scroll-padding-top: 50px;
+  // @include mq("md") {
+  //   scroll-padding-top: 80px;
+  // }
+}
+
 body {
   font-family: $base-font;
   font-optical-sizing: auto;

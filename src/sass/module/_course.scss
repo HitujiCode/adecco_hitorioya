@@ -17,11 +17,18 @@
   margin-top: rem(45);
 }
 
+.course__content + .course__content {
+  @include mq("md") {
+    margin-top: rem(60);
+  }
+}
+
 .course__list {
   margin-top: rem(50);
   display: grid;
   gap: rem(36);
   @include mq("md") {
+    margin-top: rem(58);
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -32,4 +39,7 @@
 .course__button {
   margin-top: rem(40);
   text-align: center;
+  @include mq("md") {
+    margin-top: rem(60);
+  }
 }

@@ -1,53 +1,81 @@
 @use "global" as *;
 
-.condtions {
+.conditions {
 }
 
-.condtions__inner.inner--small {
+.conditions__inner.inner--small {
 }
 
-.condtions__container {
+.conditions__container {
 }
 
-.condtions__head {
+.conditions__head {
 }
 
-.condtions__info {
+.conditions__info {
   margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
 }
 
-.condtions__text,
-.condtions__item {
+.conditions__text,
+.conditions__item {
   font-size: rem(15);
   line-height: 2;
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(40 / 16);
+  }
 }
 
-.condtions__text {
+.conditions__text {
   font-weight: $bold;
 }
 
-.condtions__list {
+.conditions__list {
 }
 
-.condtions__item {
+.conditions__item {
   padding-left: 1em;
   text-indent: -1em;
 }
 
-.condtions__item span {
+.conditions__item span {
   display: inline-block;
 }
 
-.condtions__movie {
+.conditions__movie {
   margin-top: rem(30);
   border: rem(6) solid $white;
   border-radius: 10px;
+  @include mq("md") {
+    margin-top: rem(40);
+    border-radius: 37px;
+    max-width: rem(687);
+    margin-inline: auto;
+  }
 }
 
-.condtions__movie video {
+.conditions__movie video {
   border-radius: rem(3);
   aspect-ratio: 346/192;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @include mq("md") {
+    border-radius: 30px;
+    aspect-ratio: 687/382;
+  }
+}
+
+.conditions__movie img {
+  border-radius: rem(3);
+  aspect-ratio: 346/192;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 687/382;
+  }
 }

@@ -7,7 +7,9 @@
   gap: rem(15);
   align-items: center;
   @include mq("md") {
-    padding-bottom: rem(24);
+    padding-bottom: rem(32);
+    align-items: flex-end;
+    gap: rem(10);
   }
 }
 
@@ -19,6 +21,7 @@
   letter-spacing: 0.05em;
   @include mq("md") {
     font-size: rem(40);
+    letter-spacing: 0.15em;
   }
 }
 
@@ -51,6 +54,11 @@
   flex-direction: column;
   gap: rem(8);
   width: fit-content;
+  @include mq("md") {
+    align-items: center;
+    gap: rem(24);
+    padding-bottom: rem(24);
+  }
 }
 
 .section-head--vertical .section-head__main {
@@ -65,4 +73,39 @@
   left: 50%;
   transform: translateX(-50%);
   width: rem(38);
+  @include mq("md") {
+    width: rem(61);
+  }
+}
+
+.section-head--en {
+  @extend .section-head;
+  @include mq("md") {
+    flex-direction: column;
+    align-items: center;
+    gap: rem(15);
+    padding-bottom: rem(28);
+  }
+}
+
+.section-head--en .section-head__main {
+  @include mq("md") {
+    font-size: rem(49);
+    letter-spacing: 0.05em;
+  }
+}
+
+.section-head--en .section-head__sub {
+  @include mq("md") {
+    font-size: rem(16);
+    letter-spacing: 0.15em;
+  }
+}
+
+.section-head--en::before {
+  @include mq("md") {
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(61);
+  }
 }

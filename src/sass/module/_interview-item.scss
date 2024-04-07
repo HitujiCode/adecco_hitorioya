@@ -63,8 +63,6 @@
 }
 
 .interview-item__sex {
-  // position: relative;
-  // top: 2px;
   font-size: rem(13);
   font-weight: $medium;
   line-height: 1;
@@ -79,7 +77,8 @@
 .interview-item__body {
   margin-top: rem(16);
   @include mq("md") {
-    margin-top: rem(20);
+    margin-top: 0;
+    padding-top: rem(5);
   }
 }
 

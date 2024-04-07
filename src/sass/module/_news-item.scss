@@ -1,8 +1,10 @@
 @use "global" as *;
 
 .news-item {
+  padding-block: rem(10);
   @include mq("md") {
-    padding-block: rem(15);
+    padding-top: rem(22);
+    padding-bottom: rem(15);
     display: flex;
     align-items: center;
   }
@@ -45,8 +47,9 @@
     margin-left: rem(12);
     font-size: clamp(10px, calc(13 / 1400 * 100vw), 13px);
     padding-top: rem(4);
-    padding-inline: rem(12);
+    padding-inline: rem(4);
     padding-bottom: rem(4);
+    letter-spacing: 0.1em;
   }
 }
 
@@ -59,7 +62,7 @@
   @include mq("md") {
     margin-top: 0;
     margin-left: rem(14);
-    font-size: rem(16);
+    font-size: clamp(12px, calc(16 / 1400 * 100vw), 16px);
     line-height: calc(24 / 16);
     flex: 1;
   }
@@ -78,6 +81,6 @@
   background-position: center;
   background-size: contain;
   @include mq("md") {
-    height: rem(7);
+    right: rem(12);
   }
 }

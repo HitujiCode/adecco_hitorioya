@@ -9,9 +9,14 @@
   border-radius: 0 0 10px 10px;
   border-top: 4px solid $blue;
   position: relative;
+  transition: background-color 0.3s;
   @include mq("md") {
-    padding: rem(25) rem(30);
+    padding-top: rem(30);
+    padding-bottom: rem(24);
+    padding-inline: rem(19);
     transition: background-color 0.3s;
+    border-width: 5px;
+    border-radius: 0 0 20px 20px;
   }
 }
 
@@ -32,6 +37,7 @@
   align-items: center;
   @include mq("md") {
     font-size: 12px;
+    padding-inline: rem(10);
   }
 }
 
@@ -83,6 +89,7 @@
   height: 100%;
   object-fit: cover;
   @include mq("md") {
+    border-radius: 20px;
     aspect-ratio: 361/200;
   }
 }
@@ -110,7 +117,8 @@
   line-height: calc(22 / 15);
   text-align: center;
   @include mq("md") {
-    font-size: 16px;
+    margin-top: rem(15);
+    font-size: rem(16);
   }
 }
 
@@ -144,6 +152,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  @include mq("md") {
+    width: rem(48);
+    top: initial;
+    transform: none;
+    bottom: rem(5);
+  }
 }
 
 .course-item__item {
@@ -152,7 +166,7 @@
   font-size: rem(14);
   line-height: calc(25 / 14);
   @include mq("md") {
-    font-size: 14px;
+    font-size: clamp(10px, calc(14 / 1400 * 100vw), 14px);
   }
 }
 
@@ -203,10 +217,7 @@
 
 @media (any-hover: hover) {
   .course-item:hover {
-    // background-color: $bg-offwhite;
-  }
-
-  .course-item:hover .course-item__foot-button a {
+    background-color: $ivory;
     opacity: 1;
   }
 }

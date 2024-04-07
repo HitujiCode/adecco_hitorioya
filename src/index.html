@@ -66,7 +66,7 @@
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a href="#"><span>ホーム</span></a>
+            <a href="/"><span>ホーム</span></a>
           </li>
           <li class="header__nav-item">
             <a href="#"><span>事業概要</span></a>
@@ -75,7 +75,7 @@
             <a href="#">サポート</a>
           </li>
           <li class="header__nav-item">
-            <a href="#">よくあるご質問</a>
+            <a href="#faq">よくあるご質問</a>
           </li>
           <li class="header__nav-item">
             <a href="#">コース紹介</a>
@@ -102,28 +102,28 @@
         <nav class="header__drawer-nav">
           <ul class="header__drawer-list">
             <li class="header__drawer-item">
-              <a href="#">ホーム</a>
+              <a href="./">ホーム</a>
             </li>
             <li class="header__drawer-item">
-              <a href="#">事業概要</a>
+              <a href="#point">事業概要</a>
             </li>
             <li class="header__drawer-item">
               <a href="#">サポート</a>
             </li>
             <li class="header__drawer-item">
-              <a href="#">受講の流れ</a>
+              <a href="#flow">受講の流れ</a>
             </li>
             <li class="header__drawer-item">
-              <a href="#">よくあるご質問</a>
+              <a href="#faq">よくあるご質問</a>
             </li>
             <li class="header__drawer-item">
-              <a href="#">コース紹介</a>
+              <a href="#course">コース紹介</a>
             </li>
             <li class="header__drawer-item">
-              <a href="#">支援対象者の声</a>
+              <a href="#interview">支援対象者の声</a>
             </li>
             <li class="header__drawer-item">
-              <a href="#">申込条件</a>
+              <a href="#conditions">申込条件</a>
             </li>
             <li class="header__drawer-item--contact">
               <a href="#">お問い合わせ</a>
@@ -134,79 +134,86 @@
     </div>
   </header>
   <main>
+    <div class="cta">
+      <a href="#">お申し込みは<br>こちら</a>
+    </div>
     <div class="fv">
       <div class="fv__inner inner">
         <div class="fv__container">
           <div class="fv__main">
-            <div class="fv__title-wrap">
-              <h1 class="fv__title">
-                <picture>
-                  <source srcset="./assets/images/title_pc@2x.webp" type="image/webp">
-                  <img src="./assets/images/title_sp@2x.png" alt="じぶん時間でスキルアップ、サポート充実。笑顔で続けるひとり親向けオンライン訓練・就活支援事業"
-                    width="" height="" />
-                </picture>
-              </h1>
-              <div class="fv__data">
-                <picture>
-                  <source srcset="./assets/images/data_pc@2x.webp" type="image/webp" media="(min-width: 768px)" />
-                  <source srcset="./assets/images/data_pc@2x.png" type="image/jpeg" media="(min-width: 768px)" />
-                  <source srcset="./assets/images/data_sp@2x.webp" type="image/webp" />
-                  <img src="./assets/images/data_sp@2x.png" alt="前期2024令和6年05/01より募集スタート！" width="" height="" />
-                </picture>
+            <div class="fv__main-wrap">
+              <div class="fv__title-wrap">
+                <h1 class="fv__title">
+                  <picture>
+                    <source srcset="./assets/images/title_pc@2x.webp" type="image/webp">
+                    <img src="./assets/images/title_sp@2x.png" alt="じぶん時間でスキルアップ、サポート充実。笑顔で続けるひとり親向けオンライン訓練・就活支援事業"
+                      width="224" height="78" />
+                  </picture>
+                </h1>
+                <div class="fv__data">
+                  <picture>
+                    <source srcset="./assets/images/data_pc@2x.webp" type="image/webp" media="(min-width: 768px)" />
+                    <source srcset="./assets/images/data_pc@2x.png" type="image/jpeg" media="(min-width: 768px)" />
+                    <source srcset="./assets/images/data_sp@2x.webp" type="image/webp" />
+                    <img src="./assets/images/data_sp@2x.png" alt="前期2024令和6年05/01より募集スタート！" width="170" height="71" />
+                  </picture>
+                </div>
               </div>
-            </div>
-            <div class="fv__read">
-              <img src="./assets/images/read.svg" alt="ひとりじゃないからがんばれる。" width="" height="" />
-            </div>
-            <ul class="fv__target-list">
-              <li class="fv__target-item">
-                <div class="fv__target-img">
-                  <img src="./assets/images/icon-money.svg" alt="" width="" height="" />
+              <div class="fv__read">
+                <img src="./assets/images/read.svg" alt="ひとりじゃないからがんばれる。" width="223" height="48" />
+              </div>
+              <ul class="fv__target-list">
+                <li class="fv__target-item">
+                  <div class="fv__target-img">
+                    <img src="./assets/images/icon-money.svg" alt="" width="60" height="43" />
+                  </div>
+                  <p class="fv__target-text">子供と自分の<wbr>将来のために、<br>安定した収入を得たい</p>
+                </li>
+                <li class="fv__target-item">
+                  <div class="fv__target-img">
+                    <img src="./assets/images/icon-clock.svg" alt="" width="39" height="39" />
+                  </div>
+                  <p class="fv__target-text">子供との時間を<wbr>確保するため<br>時短勤務で働きたい</p>
+                </li>
+                <li class="fv__target-item">
+                  <div class="fv__target-img">
+                    <img src="./assets/images/icon-stairs.svg" alt="" width="60" height="43" />
+                  </div>
+                  <p class="fv__target-text">自分の将来を考えると<br>正社員になりたい</p>
+                </li>
+              </ul>
+              <div class="fv__intro">
+                <p class="fv__intro-text"><span>家庭も仕事も笑顔でありたい。</span><br><span>今より時間にもお金にも</span><wbr>仕事にも余裕が欲しい。</p>
+              </div>
+              <div class="fv__wrap">
+                <p class="fv__text">様々なお悩みを抱えるひとり親のみなさん向けに、<br>eラーニング等による資格やスキルの取得支援と<wbr>就職支援を一体的に行います。</p>
+                <div class="fv__icon">
+                  <img src="./assets/images/heart.svg" alt="OneParentHeart" width="41" height="69" />
                 </div>
-                <p class="fv__target-text">子供と自分の将来のために、<br>安定した収入を得たい</p>
-              </li>
-              <li class="fv__target-item">
-                <div class="fv__target-img--small">
-                  <img src="./assets/images/icon-clock.svg" alt="" width="" height="" />
-                </div>
-                <p class="fv__target-text">子供との時間を確保するため<br>時短勤務で働きたい</p>
-              </li>
-              <li class="fv__target-item">
-                <div class="fv__target-img">
-                  <img src="./assets/images/icon-stairs.svg" alt="" width="" height="" />
-                </div>
-                <p class="fv__target-text">自分の将来を考えると<br>正社員になりたい</p>
-              </li>
-            </ul>
-            <p class="fv__intro">家庭も仕事も笑顔でありたい。<br>今より時間にもお金にも<span>仕事にも余裕が欲しい。</span></p>
-            <div class="fv__wrap">
-              <p class="fv__text">様々なお悩みを抱えるひとり親のみなさん向けに、<br>eラーニング等による資格やスキルの取得支援と<wbr>就職支援を一体的に行います。</p>
-              <div class="fv__icon">
-                <img src="./assets/images/heart.svg" alt="OneParentHeart" width="" height="" />
               </div>
             </div>
           </div>
-        </div>
-        <div class="fv__images">
-          <div class="fv__support">
-            <picture>
-              <source srcset="./assets/images/support_pc@2x.webp" type="image/webp" media="(min-width: 768px)" />
-              <source srcset="./assets/images/support_pc@2x.png" type="image/jpeg" media="(min-width: 768px)" />
-              <source srcset="./assets/images/support_sp@2x.webp" type="image/webp" />
-              <img src="./assets/images/support_sp@2x.png" alt="6つの安心サポート" width="" height="" />
-            </picture>
-          </div>
-          <div class="fv__img">
-            <picture>
-              <source srcset="./assets/images/fv.webp" type="image/webp">
-              <img src="./assets/images/fv.jpg" alt="親子が笑顔で向かい合っている様子" width="" height="" />
-            </picture>
+          <div class="fv__images">
+            <div class="fv__support">
+              <picture>
+                <source srcset="./assets/images/support_pc@2x.webp" type="image/webp" media="(min-width: 768px)" />
+                <source srcset="./assets/images/support_pc@2x.png" type="image/jpeg" media="(min-width: 768px)" />
+                <source srcset="./assets/images/support_sp@2x.webp" type="image/webp" />
+                <img src="./assets/images/support_sp@2x.png" alt="6つの安心サポート" width="345" height="191" />
+              </picture>
+            </div>
+            <div class="fv__img">
+              <picture>
+                <source srcset="./assets/images/fv.webp" type="image/webp">
+                <img src="./assets/images/fv.jpg" alt="親子が笑顔で向かい合っている様子" width="375" height="353" />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="news layout-news">
+    <section id="news" class="news layout-news">
       <div class="news__inner inner--small">
         <div class="news__container">
           <div class="news__head">
@@ -260,7 +267,7 @@
       </div>
     </section>
 
-    <section class="point layout-common">
+    <section id="point" class="point layout-common">
       <div class="point__inner inner">
         <div class="point__container">
           <div class="point__head">
@@ -275,7 +282,7 @@
                 <div class="point-item__head">
                   <p class="point-item__num">Point<span>0</span></p>
                   <div class="point-item__img">
-                    <img src="./assets/images/point01.svg" alt="" width="" height="" loading="lazy" />
+                    <img src="./assets/images/point01.svg" alt="" width="75" height="47" loading="lazy" />
                   </div>
                 </div>
                 <h3 class="point-item__title">すき間時間を活かして学べる<br>eラーニング</h3>
@@ -289,7 +296,7 @@
                 <div class="point-item__head">
                   <p class="point-item__num">Point<span>0</span></p>
                   <div class="point-item__img">
-                    <img src="./assets/images/point02.svg" alt="" width="" height="" loading="lazy" />
+                    <img src="./assets/images/point02.svg" alt="" width="65" height="79" loading="lazy" />
                   </div>
                 </div>
                 <h3 class="point-item__title">専任キャリアアドバイザーと<br>メンターにいつでも相談</h3>
@@ -303,7 +310,7 @@
                 <div class="point-item__head">
                   <p class="point-item__num">Point<span>0</span></p>
                   <div class="point-item__img">
-                    <img src="./assets/images/point03.svg" alt="" width="" height="" loading="lazy" />
+                    <img src="./assets/images/point03.svg" alt="" width="82" height="55" loading="lazy" />
                   </div>
                 </div>
                 <h3 class="point-item__title">専用求人で今より一歩上の<br>理想のキャリアを実現</h3>
@@ -317,7 +324,7 @@
                 <div class="point-item__head">
                   <p class="point-item__num">Point<span>0</span></p>
                   <div class="point-item__img">
-                    <img src="./assets/images/point04.svg" alt="" width="" height="" loading="lazy" />
+                    <img src="./assets/images/point04.svg" alt="" width="57" height="79" loading="lazy" />
                   </div>
                 </div>
                 <h3 class="point-item__title">育児の悩みも育児支援<br>アドバイザーに相談できる</h3>
@@ -331,7 +338,7 @@
       </div>
     </section>
 
-    <section class="course layout-course layout-common">
+    <section id="course" class="course layout-course layout-common">
       <div class="course__inner inner">
         <div class="course__container">
           <div class="course__head">
@@ -529,7 +536,7 @@
       </div>
     </section>
 
-    <section class="flow layout-common">
+    <section id="flow" class="flow layout-common">
       <div class="flow__inner inner--small">
         <div class="flow__container">
           <div class="flow__head">
@@ -612,25 +619,25 @@
       </div>
     </section>
 
-    <section class="condtions layout-common">
-      <div class="condtions__inner inner--small">
-        <div class="condtions__container">
-          <div class="condtions__head">
+    <section id="conditions" class="conditions layout-common">
+      <div class="conditions__inner inner--small">
+        <div class="conditions__container">
+          <div class="conditions__head">
             <hgroup class="section-head">
               <h2 class="section-head__main">受講条件</h2>
-              <p class="section-head__sub">Condtions</p>
+              <p class="section-head__sub">conditions</p>
             </hgroup>
-            <div class="condtions__info">
-              <p class="condtions__text">下記３つの条件を全て満たす方が対象です。</p>
-              <ul class="condtions__list">
-                <li class="condtions__item">①ひとり親の方で仕事と家庭の両立のために、eラーニング等による訓練受講を希望する方。</li>
-                <li class="condtions__item">②都内に在中または都内で在勤している方。</li>
-                <li class="condtions__item">
+            <div class="conditions__info">
+              <p class="conditions__text">下記３つの条件を全て満たす方が対象です。</p>
+              <ul class="conditions__list">
+                <li class="conditions__item">①ひとり親の方で仕事と家庭の両立のために、eラーニング等による訓練受講を希望する方。</li>
+                <li class="conditions__item">②都内に在中または都内で在勤している方。</li>
+                <li class="conditions__item">
                   ③令和５年度、令和６年度に「成長産業分野キャリア形成支援事業」や「ひとり親向けオンライン訓練・就職支援事業」、<span>「女性向けキャリアチェンジ支援事業」等の</span>類似訓練の受講が決定していない方。
                 </li>
               </ul>
             </div>
-            <div class="condtions__movie">
+            <div class="conditions__movie">
               <!-- <video src="" controls></video> -->
               <img src="./assets/images/dammy.png" alt="" width="346" height="192" />
             </div>
@@ -639,13 +646,13 @@
       </div>
     </section>
 
-    <section class="interview layout-common">
+    <section id="interview" class="interview layout-common">
       <div class="interview__inner inner--small">
         <div class="interview__container">
           <div class="interview__head">
-            <hgroup class="section-head">
-              <h2 class="section-head__main">参加者インタビュー</h2>
-              <p class="section-head__sub">Interview</p>
+            <hgroup class="section-head--en">
+              <h2 class="section-head__main">Interview</h2>
+              <p class="section-head__sub">対象支援者の声</p>
             </hgroup>
             <ul class="interview__list">
               <li class="interview__item">
@@ -729,7 +736,7 @@
       </div>
     </section>
 
-    <section class="recruit layout-recruit layout-common">
+    <section id="recruit" class="recruit layout-recruit layout-common">
       <div class="recruit__inner inner--small">
         <div class="recruit__container">
           <div class="recruit__info">
@@ -787,7 +794,7 @@
       </div>
     </section>
 
-    <section class="faq layout-common">
+    <section id="faq" class="faq layout-common">
       <div class="faq__inner inner--small">
         <div class="faq__container">
           <div class="faq__head">
@@ -798,21 +805,21 @@
           </div>
           <dl class="faq__list">
             <div class="faq__item faq-item">
-              <dt class="faq-item__question js-faq is-open"><span>Q</span>子どもが小さいため、決まった時間に 学習できないのですが大丈夫でしょうか。
+              <dt class="faq-item__question js-faq is-open">子どもが小さいため、決まった時間に<span>学習できないのですが大丈夫でしょうか。</span>
               </dt>
               <dd class="faq-item__answer">
                 大丈夫です！キャリアアドバイザーが、仕事の紹介や就業条件の企業との調整なども行います。
               </dd>
             </div>
             <div class="faq__item faq-item">
-              <dt class="faq-item__question js-faq is-open"><span>Q</span>どんな科目を選べば良いのかが分かりません。
+              <dt class="faq-item__question js-faq">どんな科目を選べば良いのかが分かりません。
               </dt>
               <dd class="faq-item__answer">
                 大丈夫です！キャリアアドバイザーが、仕事の紹介や就業条件の企業との調整なども行います。
               </dd>
             </div>
             <div class="faq__item faq-item">
-              <dt class="faq-item__question js-faq is-open"><span>Q</span>親も近くに住んでおらず、ワンオペ育児のため続けられるか心配です。
+              <dt class="faq-item__question js-faq">親も近くに住んでおらず、ワンオペ育児のため続けられるか心配です。
               </dt>
               <dd class="faq-item__answer">
                 大丈夫です！キャリアアドバイザーが、仕事の紹介や就業条件の企業との調整なども行います。

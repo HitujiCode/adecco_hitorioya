@@ -8,16 +8,17 @@
 .footer::before {
   content: "";
   position: absolute;
-  top: calc(-84 / 1400 * 100vw);
+  top: calc(-44 / 375 * 100vw);
   left: 0;
-  right: 0;
-  height: auto;
+  width: 100%;
+  height: calc(44 / 375 * 100vw);
   background-image: url("../../assets/images/bg-footer_sp.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   @include mq("md") {
     background-image: url("../../assets/images/bg-footer_pc.svg");
+    top: calc(-84 / 1400 * 100vw);
     height: calc(84 / 1400 * 100vw);
   }
 }
@@ -37,10 +38,13 @@
 .footer__totop a {
   display: inline-block;
   position: relative;
-  font-size: rem(17);
+  font-size: rem(15);
   font-weight: $bold;
   font-family: $second-font;
   line-height: 1;
+  @include mq("md") {
+    font-size: rem(17);
+  }
 }
 
 .footer__totop a::before {
@@ -55,10 +59,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  @include mq("md") {
+    top: rem(-28);
+    width: rem(38);
+    height: rem(20);
+  }
 }
 
 .footer__head {
-  margin-top: rem(38);
+  margin-top: rem(30);
   padding: rem(18);
   background-color: $white;
   border: 2px solid $black;

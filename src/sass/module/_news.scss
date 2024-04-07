@@ -9,22 +9,19 @@
 
 .news__container {
   @include mq("md") {
-    display: flex;
-    gap: rem(50);
   }
 }
 
 .news__head {
-  @include mq("md") {
-    justify-content: flex-start;
-    padding-top: rem(16);
-  }
 }
 
 .news__link {
   margin-top: rem(20);
   text-align: right;
   line-height: 1;
+  @include mq("md") {
+    margin-top: 0;
+  }
 }
 
 .news__link a {
@@ -36,6 +33,10 @@
   color: $rose;
   line-height: 1;
   display: inline-block;
+  @include mq("md") {
+    padding-right: rem(18);
+    font-size: rem(16);
+  }
 }
 
 .news__link a::after {
@@ -50,6 +51,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  @include mq("md") {
+    width: rem(6);
+    height: rem(11);
+  }
 }
 
 .news__list {
@@ -60,17 +65,21 @@
   background-color: $white;
   border-radius: 15px;
   @include mq("md") {
-    margin-top: 0;
+    margin-top: rem(20);
+    border-radius: 30px;
+    padding-top: rem(20);
+    padding-inline: rem(50);
+    padding-bottom: rem(40);
   }
 }
 
 .news__list-item {
-  padding-block: rem(10);
-  @include mq("md") {
-    padding-block: rem(15);
-  }
+  border-bottom: 2px solid $lightgray;
 }
 
-.news__list-item:not(:last-child) {
-  border-bottom: 2px solid $lightgray;
+.news__list-item:last-child {
+  border-bottom: none;
+  @include mq("md") {
+    border-bottom: 2px solid $lightgray;
+  }
 }

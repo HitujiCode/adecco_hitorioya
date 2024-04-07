@@ -3,4 +3,8 @@
 .layout-course {
   padding-top: rem(35);
   padding-bottom: rem(50);
+  @include mq("md") {
+    padding-top: rem(70);
+    padding-bottom: rem(80);
+  }
 }

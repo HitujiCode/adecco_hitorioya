@@ -4,6 +4,12 @@
   padding: rem(15);
   border-radius: 10px;
   background-color: $white;
+  @include mq("md") {
+    padding-top: rem(22);
+    padding-bottom: rem(17);
+    padding-left: rem(22);
+    padding-right: rem(16);
+  }
 }
 
 .recruit-item__head {
@@ -16,6 +22,7 @@
   overflow-wrap: anywhere;
   word-break: keep-all;
   position: relative;
+  font-feature-settings: "palt";
   @include mq("md") {
   }
 }
@@ -30,7 +37,6 @@
   background-color: $blue;
   border-radius: 2px;
   @include mq("md") {
-    height: rem(31);
   }
 }
 
