@@ -113,6 +113,7 @@
 
 .interview-item__button {
   margin-top: rem(20);
+  text-align: center;
   @include mq("md") {
     text-align: right;
   }

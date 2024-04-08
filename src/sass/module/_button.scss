@@ -12,7 +12,9 @@
   border-radius: 30px;
   max-width: rem(345);
   width: 100%;
-  transition: background-color 0.3s color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   @include mq("md") {
     padding-top: rem(11);
     padding-bottom: rem(12);
@@ -40,6 +42,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  transition: filter 0.2s;
   @include mq("md") {
   }
 }
@@ -76,5 +79,24 @@
   @include mq("md") {
     width: rem(10);
     height: rem(18);
+  }
+}
+
+@media (any-hover: hover) {
+  a:hover {
+    opacity: 1;
+  }
+
+  .button:hover {
+    background-color: $black;
+    color: $white;
+  }
+
+  .button:hover span::after {
+    filter: brightness(0) invert(1);
+  }
+
+  .button--entry:hover {
+    background-color: $blue;
   }
 }

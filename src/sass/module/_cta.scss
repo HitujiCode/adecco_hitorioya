@@ -3,27 +3,36 @@
 .cta {
   position: fixed;
   bottom: 0;
-  right: rem(10);
+  right: rem(3);
   z-index: $cta;
-  width: rem(164);
-  height: rem(84);
+  width: rem(80);
+  height: rem(40);
+  @include mq("md") {
+    right: rem(10);
+    width: rem(164);
+    height: rem(84);
+  }
 }
 
 .cta a {
   display: inline-block;
-  font-size: rem(19);
+  font-size: rem(10);
   font-family: $second-font;
   color: $white;
-  line-height: calc(20 / 19);
+  line-height: calc(11 / 10);
   display: flex;
   align-items: flex-end;
   justify-content: center;
   text-align: center;
   position: relative;
   height: inherit;
-  padding-bottom: rem(8);
+  padding-bottom: rem(3);
   clip-path: circle(62% at 50% 100%);
   background-color: $rose;
+  @include mq("md") {
+    font-size: rem(19);
+    padding-bottom: rem(8);
+  }
 }
 
 .cta::before {
@@ -32,13 +41,28 @@
   top: rem(-15);
   left: 50%;
   transform: translateX(-50%);
-  width: rem(48);
+  width: rem(28);
   aspect-ratio: 1;
   background-image: url("../../assets/images/icon-note.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border: 3px solid $rose;
+  border: 1px solid $rose;
   border-radius: 50%;
   z-index: 1;
+  transition: top 0.1s;
+  @include mq("md") {
+    width: rem(48);
+    border-width: 3px;
+  }
+}
+
+@media (any-hover: hover) {
+  .cta:hover::before {
+    top: rem(-23);
+  }
+
+  .cta:hover a {
+    opacity: 1;
+  }
 }

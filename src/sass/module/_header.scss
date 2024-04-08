@@ -22,20 +22,16 @@
   filter: drop-shadow(0 0 9px #00000029);
   transition: background-color 0.3s;
   @include mq("md") {
-    padding-left: rem(20);
-    padding-right: rem(28);
+    padding-right: min(calc(28 / 1400 * 100vw), 28px);
+    padding-left: min(calc(20 / 1400 * 100vw), 20px);
   }
-}
-
-.header__inner.is-open {
-  // background-color: $white;
 }
 
 .header__logo {
   width: rem(98);
   height: inherit;
   @include mq("md") {
-    width: rem(128);
+    width: calc(128 / 1400 * 100vw);
   }
 }
 
@@ -61,8 +57,8 @@
   align-items: center;
   gap: rem(10);
   @include mq("md") {
-    margin-left: rem(20);
-    gap: rem(20);
+    margin-left: min(calc(20 / 1400 * 100vw), 20px);
+    gap: min(calc(20 / 1400 * 100vw), 20px);
   }
 }
 
@@ -71,6 +67,7 @@
   height: inherit;
   @include mq("md") {
     max-width: rem(55);
+    width: calc(55 / 1400 * 100vw);
   }
 }
 
@@ -94,7 +91,7 @@
   height: inherit;
   @include mq("md") {
     max-width: rem(91);
-    // width: calc(91 / 1400 * 100vw);
+    width: calc(91 / 1400 * 100vw);
   }
 }
 
@@ -109,7 +106,7 @@
   height: inherit;
   @include mq("md") {
     max-width: rem(91);
-    // width: calc(91 / 1400 * 100vw);
+    width: calc(91 / 1400 * 100vw);
   }
 }
 
@@ -147,6 +144,7 @@
 .header__nav-item {
   display: flex;
   height: inherit;
+  flex-shrink: 0;
 }
 
 .header__nav-item a {
@@ -157,7 +155,7 @@
   font-weight: $medium;
   line-height: 1;
   position: relative;
-  padding-inline: rem(15);
+  padding-inline: min(calc(15 / 1400 * 100vw), 15px);
 }
 
 .header__nav-item a::before {
@@ -176,7 +174,7 @@
   height: inherit;
   display: flex;
   align-items: center;
-  margin-left: rem(13);
+  margin-left: min(calc(13 / 1400 * 100vw), 13px);
 }
 
 .header__nav-contact a {
@@ -188,9 +186,9 @@
   background-color: $rose;
   position: relative;
   padding-top: rem(14);
-  padding-inline: rem(19);
   padding-bottom: rem(15);
   border-radius: 28px;
+  padding-inline: min(calc(19 / 1400 * 100vw), 19px);
 }
 
 .header__nav-contact a::after {

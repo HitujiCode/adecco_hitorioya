@@ -100,6 +100,7 @@
   @include mq("md") {
     line-height: calc(27 / 19);
     letter-spacing: 0.05em;
+    font-size: clamp(10px, calc(18 / 1400 * 100vw), 14px);
   }
 }
 
@@ -125,6 +126,6 @@
   text-align: justify;
   @include mq("md") {
     margin-top: rem(10);
-    font-size: clamp(12px, calc(15 / 1400 * 100vw), 15px);
+    font-size: clamp(10px, calc(15 / 1400 * 100vw), 15px);
   }
 }

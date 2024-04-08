@@ -232,7 +232,7 @@
   line-height: calc(23 / 13);
   overflow-wrap: anywhere;
   word-break: keep-all;
-  flex: 1;
+  width: rem(299);
   @include mq("md") {
     font-size: clamp(10px, calc(14 / 1400 * 100vw), 14px);
     line-height: calc(30 / 14);

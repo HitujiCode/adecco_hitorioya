@@ -77,7 +77,10 @@
 
 .course-item__img {
   margin-top: rem(18);
+  overflow: clip;
+  border-radius: 10px;
   @include mq("md") {
+    border-radius: 20px;
     margin-top: rem(15);
   }
 }
@@ -88,6 +91,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s;
   @include mq("md") {
     border-radius: 20px;
     aspect-ratio: 361/200;
@@ -122,6 +126,10 @@
   }
 }
 
+.course-item__read span {
+  display: inline-block;
+}
+
 .course-item__bottom {
   margin-top: rem(16);
   padding-top: rem(16);
@@ -152,11 +160,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  transition: transform 0.3s;
   @include mq("md") {
     width: rem(48);
     top: initial;
     transform: none;
     bottom: rem(5);
+    right: rem(4);
   }
 }
 
@@ -173,9 +183,9 @@
 .course-item__item::before {
   content: "";
   position: absolute;
-  top: 50%;
+  // top: 50%;
+  top: rem(10);
   left: 0;
-  transform: translateY(-50%);
   width: rem(6);
   aspect-ratio: 1;
   background-color: $blue;
@@ -219,5 +229,13 @@
   .course-item:hover {
     background-color: $ivory;
     opacity: 1;
+  }
+
+  .course-item:hover .course-item__img img {
+    transform: scale(1.05);
+  }
+
+  .course-item:hover .course-item__list::after {
+    transform: translateY(-50%) translateX(rem(5));
   }
 }
