@@ -46,81 +46,36 @@ jQuery(function ($) {
   });
 
   // スムーススクロール
-  // アンカーリンク
-  // $(document).ready(function () {
-  //   const fixedHeaderHeight = 50; // 固定ヘッダーの高さ
-  //   let lastWindowHeight = $(window).height(); // 初期ウィンドウの高さ
-
-  //   function adjustAnchorOffset() {
-  //     $('a[href^="#"]')
-  //       .off("click")
-  //       .on("click", function (e) {
-  //         const href = $(this).attr("href");
-
-  //         if (href.length > 1 && href.startsWith("#")) {
-  //           e.preventDefault();
-
-  //           const targetElement = $(href);
-
-  //           if (targetElement.length) {
-  //             const elementPosition = targetElement.offset().top;
-  //             const currentWindowHeight = $(window).height();
-  //             const progressBarHeight = lastWindowHeight - currentWindowHeight;
-
-  //             const offsetPosition =
-  //               elementPosition - fixedHeaderHeight - progressBarHeight;
-
-  //             $("html, body").animate(
-  //               {
-  //                 scrollTop: offsetPosition,
-  //               },
-  //               "smooth"
-  //             );
-
-  //             lastWindowHeight = currentWindowHeight; // ウィンドウの高さを更新
-  //           }
-  //         }
-  //       });
-  //   }
-
-  //   // リサイズ時にウィンドウの高さを更新
-  //   $(window).on("resize scroll", function () {
-  //     lastWindowHeight = $(window).height();
-  //   });
-
-  //   adjustAnchorOffset(); // 初期読み込み時に実行
-  // });
-
   $(function () {
-    var headerHeight = $("js-header").height();
+    const headerHeight = $(".js-header").height();
 
     $('a[href^="#"]').click(function (e) {
-      var href = $(this).attr("href");
-      var target = $(href == "#" || href == "" ? "html" : href);
-      var position = target.offset().top - headerHeight;
+      e.preventDefault();
+      const href = $(this).attr("href");
+      const target = $(href == "#" || href == "" ? "html" : href);
+      const position = target.offset().top - headerHeight;
 
-      $.when(
-        $("html, body").animate(
-          {
-            scrollTop: position,
-          },
-          400,
-          "swing"
-        ),
-        e.preventDefault()
-      ).done(function () {
-        var diff = target.offset().top - headerHeight;
-        if (diff === position) {
-        } else {
-          $("html, body").animate(
-            {
-              scrollTop: diff,
-            },
-            10,
-            "swing"
-          );
+      $("html, body").animate(
+        {
+          scrollTop: position,
+        },
+        400,
+        "swing",
+        function () {
+          // スクロール完了後に位置を再計算
+          const diff = target.offset().top - headerHeight;
+          // 計算された位置が異なる場合は、再度スクロール
+          if (diff !== position) {
+            $("html, body").animate(
+              {
+                scrollTop: diff,
+              },
+              10,
+              "swing"
+            );
+          }
         }
-      });
+      );
     });
   });
 });
