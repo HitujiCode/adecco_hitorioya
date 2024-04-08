@@ -16,12 +16,13 @@
 }
 
 .interview__list {
-  margin-top: rem(30);
+  // margin-top: rem(30);
+  margin-top: rem(35);
   display: grid;
-  gap: rem(30);
+  // gap: rem(30);
+  gap: rem(40);
   @include mq("md") {
-    margin-top: rem(35);
-    gap: rem;
+    gap: rem(30);
   }
 }
 

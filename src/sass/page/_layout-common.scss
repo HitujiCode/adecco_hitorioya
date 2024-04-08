@@ -1,7 +1,8 @@
 @use "global" as *;
 
 .layout-common {
-  margin-top: rem(35);
+  // margin-top: rem(35);
+  margin-top: rem(50);
   @include mq("md") {
     margin-top: rem(70);
   }
