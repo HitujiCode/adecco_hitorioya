@@ -30,3 +30,14 @@
     height: rem(31);
   }
 }
+
+.head--rose {
+  @extend .head;
+  font-size: rem(17);
+  padding-left: rem(16);
+}
+
+.head--rose::before {
+  background-color: $rose;
+  left: rem(3);
+}

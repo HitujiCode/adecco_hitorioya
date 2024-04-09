@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.tag {
+  font-size: rem(11);
+  font-weight: $medium;
+  color: $white;
+  line-height: 1;
+  text-align: center;
+  background-color: $black;
+  border-radius: 25px;
+  padding-top: rem(7);
+  padding-bottom: rem(8);
+}

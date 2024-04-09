@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.detail {
+}
+
+.detail__inner.inner {
+}
+
+.detail__container {
+}
+
+.detail__head {
+  display: flex;
+  justify-content: center;
+}
+
+.detail__text {
+  margin-top: rem(30);
+  font-size: rem(16);
+  font-weight: $semi-bold;
+  line-height: calc(30 / 16);
+}
+
+.detail__content {
+  margin-top: rem(30);
+  border: 3px solid $black;
+  background-color: $beige;
+  border-radius: 10px;
+  padding-top: rem(30);
+  padding-inline: rem(20);
+}
+
+.detail__content-head {
+}
+
+.detail__content-list {
+  margin-top: rem(30);
+}
+
+.detail__content-item + .detail__content-item {
+  margin-top: rem(20);
+}

@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.detail-item {
+  padding-top: rem(24);
+  padding-bottom: rem(27);
+  padding-inline: rem(10);
+  border-radius: 10px;
+  background-color: $white;
+}
+
+.detail-item__head {
+  font-size: rem(17);
+  font-weight: $bold;
+  font-family: $second-font;
+  line-height: 1;
+  text-align: center;
+}
+
+.detail-item__img {
+  margin-top: rem(14);
+  border: rem(4) solid $white;
+  border-radius: 18px;
+}
+
+.detail-item__img img {
+  border-radius: 18px;
+  aspect-ratio: 288/188;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-item__skill-wrap {
+  margin-top: rem(15);
+}
+
+.detail-item__skill-head {
+  font-size: rem(15);
+  font-weight: $medium;
+  line-height: calc(21 / 15);
+  border-bottom: 2px solid $blue;
+  display: inline-block;
+}
+
+.detail-item__skills {
+  margin-top: rem(8);
+}
+
+.detail-item__skill-list {
+}
+
+.detail-item__skill-item {
+  font-size: rem(13);
+  display: inline-block;
+}
+
+.detail-item__skill-item:not(:last-child):after {
+  content: "／";
+}
+
+.detail-item__text {
+  margin-top: rem(20);
+  font-size: rem(14);
+  line-height: calc(26 / 14);
+  text-align: justify;
+}

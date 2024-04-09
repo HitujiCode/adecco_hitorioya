@@ -32,6 +32,7 @@
   @include mq("md") {
     font-size: rem(19);
     padding-bottom: rem(8);
+    font-weight: $extra-bold;
   }
 }
 
