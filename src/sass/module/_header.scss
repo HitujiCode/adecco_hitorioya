@@ -14,6 +14,7 @@
 .header__inner {
   background-color: rgba($white, 0.9);
   padding-left: rem(10);
+  // padding-right: min(calc(28 / 1400 * 100vw), 28px);
   height: inherit;
   display: flex;
   align-items: center;
@@ -22,8 +23,10 @@
   filter: drop-shadow(0 0 9px #00000029);
   transition: background-color 0.3s;
   @include mq("md") {
+    padding-right: min(calc(10 / 1400 * 100vw), 10px);
+  }
+  @include mq("xl") {
     padding-right: min(calc(28 / 1400 * 100vw), 28px);
-    padding-left: min(calc(20 / 1400 * 100vw), 20px);
   }
 }
 
@@ -31,7 +34,7 @@
   width: rem(98);
   height: inherit;
   @include mq("md") {
-    width: calc(128 / 1400 * 100vw);
+    width: min(calc(128 / 1400 * 100vw), 128px);
   }
 }
 
@@ -156,6 +159,7 @@
   line-height: 1;
   position: relative;
   padding-inline: min(calc(15 / 1400 * 100vw), 15px);
+  transition: color 0.3s;
 }
 
 .header__nav-item a::before {
@@ -164,17 +168,32 @@
   left: rem(5);
   width: rem(4);
   height: rem(7);
-  background-image: url(../../assets/images/icon-arrow-black.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-color: $black;
+  mask-image: url(../../assets/images/icon-arrow-black.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  transition: background-color 0.3s;
+}
+
+.header__nav-item.is-current a {
+  color: $blue;
+}
+
+.header__nav-item.is-current a::before {
+  background-color: $blue;
 }
 
 .header__nav-contact {
   height: inherit;
   display: flex;
   align-items: center;
-  margin-left: min(calc(13 / 1400 * 100vw), 13px);
+  @include mq("xl") {
+    margin-left: min(calc(13 / 1400 * 100vw), 13px);
+  }
+  @include mq("md") {
+    margin-left: 0;
+  }
 }
 
 .header__nav-contact a {
@@ -189,6 +208,7 @@
   padding-bottom: rem(15);
   border-radius: 28px;
   padding-inline: min(calc(19 / 1400 * 100vw), 19px);
+  transition: background-color 0.3s;
 }
 
 .header__nav-contact a::after {
@@ -199,7 +219,7 @@
   transform: translateX(-50%);
   width: rem(16);
   height: rem(13);
-  background-color: $rose;
+  background-color: inherit;
   clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
 
@@ -347,4 +367,19 @@
 
 .header__drawer-item + .header__drawer-item {
   margin-top: rem(10);
+}
+
+@media (any-hover: hover) {
+  .header__nav-item a:hover {
+    color: $blue;
+  }
+
+  .header__nav-item a:hover::before {
+    background-color: $blue;
+  }
+
+  .header__nav-contact a:hover {
+    background-color: $blue;
+    opacity: 1;
+  }
 }

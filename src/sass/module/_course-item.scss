@@ -1,7 +1,8 @@
 @use "global" as *;
 
 .course-item {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding-top: rem(20);
   padding-bottom: rem(18);
   padding-inline: rem(17);
@@ -10,6 +11,7 @@
   border-top: 4px solid $blue;
   position: relative;
   transition: background-color 0.3s;
+  height: 100%;
   @include mq("md") {
     padding-top: rem(30);
     padding-bottom: rem(24);
@@ -114,6 +116,7 @@
 }
 
 .course-item__read {
+  flex-grow: 1;
   margin-top: rem(7);
   font-size: rem(15);
   font-weight: $bold;
@@ -143,7 +146,8 @@
 }
 
 .course-item__list {
-  padding-right: rem(60);
+  margin-top: auto;
+  padding-right: rem(54);
   flex: 1;
   position: relative;
 }
@@ -237,5 +241,8 @@
 
   .course-item:hover .course-item__list::after {
     transform: translateY(-50%) translateX(rem(5));
+    @include mq("md") {
+      transform: translateX(rem(5));
+    }
   }
 }

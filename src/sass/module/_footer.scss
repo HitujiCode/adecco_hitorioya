@@ -8,7 +8,7 @@
 .footer::before {
   content: "";
   position: absolute;
-  top: calc(-44 / 375 * 100vw);
+  top: calc(-43 / 375 * 100vw);
   left: 0;
   width: 100%;
   height: calc(44 / 375 * 100vw);
@@ -18,7 +18,7 @@
   background-size: cover;
   @include mq("md") {
     background-image: url("../../assets/images/bg-footer_pc.svg");
-    top: calc(-84 / 1400 * 100vw);
+    top: calc(-83 / 1400 * 100vw);
     height: calc(84 / 1400 * 100vw);
   }
 }
@@ -250,6 +250,7 @@
   font-weight: $medium;
   font-family: $second-font;
   line-height: 1;
+  transition: color 0.3s;
 }
 
 .footer__nav-item a::before {
@@ -260,10 +261,12 @@
   width: rem(6);
   height: rem(11);
   transform: translateY(-50%);
-  background-image: url("../../assets/images/icon-arrow-black.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-color: $black;
+  mask-image: url("../../assets/images/icon-arrow-black.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  transition: background-color 0.3s;
   @include mq("md") {
     top: 55%;
   }
@@ -386,4 +389,14 @@
   font-size: 13px;
   color: $black;
   line-height: 1;
+}
+
+@media (any-hover: hover) {
+  .footer__nav-item a:hover {
+    color: $blue;
+  }
+
+  .footer__nav-item a:hover::before {
+    background-color: $blue;
+  }
 }

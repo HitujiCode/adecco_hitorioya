@@ -78,4 +78,29 @@ jQuery(function ($) {
       );
     });
   });
+
+  // スクロールに応じてヘッダーにactiveクラスを付与
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      const currentPosition =
+        $(window).scrollTop() + $(".js-header").outerHeight() + 200;
+
+      $("section").each(function () {
+        const sectionTop = $(this).offset().top;
+        const sectionHeight = $(this).outerHeight();
+        const nextSectionTop =
+          $(this).next("section").length > 0
+            ? $(this).next("section").offset().top
+            : $(document).height();
+
+        if (currentPosition >= sectionTop && currentPosition < nextSectionTop) {
+          $(".header__nav-item").removeClass("is-current");
+          const id = $(this).attr("id");
+          $('.header__nav-item a[href="#' + id + '"]')
+            .parent()
+            .addClass("is-current");
+        }
+      });
+    });
+  });
 });

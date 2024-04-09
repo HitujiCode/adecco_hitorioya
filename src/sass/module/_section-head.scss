@@ -90,6 +90,7 @@
 
 .section-head--en .section-head__main {
   @include mq("md") {
+    font-weight: $extra-bold;
     font-size: rem(49);
     letter-spacing: 0.05em;
   }
