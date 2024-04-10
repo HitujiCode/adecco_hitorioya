@@ -6,9 +6,17 @@
 }
 
 .sub-fv__container {
+  @include mq("md") {
+    position: relative;
+  }
 }
 
 .sub-fv__img {
+  height: clamp(153px, calc(153 / 375 * 100vw), 220px);
+  @include mq("md") {
+    width: calc(916 / 1400 * 100vw);
+    height: clamp(300px, calc(550 / 1400 * 100vw), 970px);
+  }
 }
 
 .sub-fv__img img {
@@ -18,21 +26,37 @@
   height: 100%;
   object-fit: cover;
   object-position: center 20%;
+  @include mq("md") {
+    aspect-ratio: 916/550;
+    border-radius: 0;
+    object-position: -24px 68%;
+  }
 }
 
 .sub-fv__inner.inner {
+  @include mq("md") {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+  }
 }
 
 .sub-fv__content {
   position: relative;
-  margin-top: rem(-20);
-  padding-top: rem(25);
-  padding-bottom: rem(16);
-  padding-inline: rem(14);
+  margin-top: calc(-20 / 375 * 100vw);
+  padding: rem(25) rem(14);
   background-color: $white;
   border: 3px solid $black;
   border-radius: 20px;
   text-align: center;
+  @include mq("md") {
+    margin-top: 0;
+    max-width: rem(716);
+    margin-left: auto;
+    border-radius: 50px;
+    padding-block: rem(64);
+  }
 }
 
 .sub-fv__head {
@@ -44,6 +68,9 @@
   font-family: $second-font;
   color: $blue;
   line-height: 1;
+  @include mq("md") {
+    font-size: rem(22);
+  }
 }
 
 .sub-fv__head-title {
@@ -52,6 +79,9 @@
   font-weight: $bold;
   font-family: $second-font;
   line-height: 1;
+  @include mq("md") {
+    font-size: rem(40);
+  }
 }
 
 .sub-fv__jobs {
@@ -60,11 +90,21 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: rem(5);
+  @include mq("md") {
+    margin-top: rem(36);
+    margin-inline: auto;
+    column-gap: rem(17);
+    row-gap: rem(20);
+    // max-width: rem(478);
+  }
 }
 
 .sub-fv__job {
   min-width: rem(153);
-  // width: fit-content;
+  @include mq("md") {
+    min-width: initial;
+    width: fit-content;
+  }
 }
 
 .sub-fv__read {
@@ -75,6 +115,11 @@
   overflow-wrap: anywhere;
   word-break: keep-all;
   letter-spacing: -0.03em;
+  @include mq("md") {
+    margin-top: rem(30);
+    font-size: rem(21);
+    line-height: calc(30 / 21);
+  }
 }
 
 .sub-fv__bottom {
@@ -82,6 +127,11 @@
   background-color: $blue;
   border-radius: 0 0 20px 20px;
   padding: rem(17) rem(15);
+  @include mq("md") {
+    margin-top: 0;
+    padding-top: rem(23);
+    padding-bottom: rem(20);
+  }
 }
 
 .sub-fv__data {
@@ -89,6 +139,14 @@
   border-radius: 10px;
   padding-top: rem(22);
   padding-bottom: rem(16);
+  @include mq("md") {
+    background-color: initial;
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    gap: rem(17);
+    justify-content: center;
+  }
 }
 
 .sub-fv__data-wrap {
@@ -96,10 +154,22 @@
   gap: rem(15);
   align-items: center;
   justify-content: center;
+  @include mq("md") {
+    background-color: $white;
+    border-radius: 32px;
+    padding-top: rem(11);
+    padding-bottom: rem(12);
+    padding-inline: rem(12);
+    max-width: rem(304);
+    width: 100%;
+  }
 }
 
 .sub-fv__data-wrap + .sub-fv__data-wrap {
   margin-top: rem(6);
+  @include mq("md") {
+    margin-top: 0;
+  }
 }
 
 .sub-fv__data-head {
@@ -109,6 +179,10 @@
   font-weight: $bold;
   font-family: $second-font;
   line-height: 1;
+  @include mq("md") {
+    font-size: rem(18);
+    padding-right: rem(26);
+  }
 }
 
 .sub-fv__data-head::after {
@@ -124,6 +198,10 @@
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
+  @include mq("md") {
+    width: rem(11);
+    height: rem(19);
+  }
 }
 
 .sub-fv__data-capacity {
@@ -134,8 +212,15 @@
   font-family: $second-font;
   color: $rose;
   line-height: 1;
+  @include mq("md") {
+    font-size: rem(26);
+    top: rem(-2);
+  }
 }
 
 .sub-fv__data-capacity span {
   font-size: rem(28);
+  @include mq("md") {
+    font-size: rem(34);
+  }
 }

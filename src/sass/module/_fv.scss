@@ -19,13 +19,13 @@
 }
 
 .fv__main {
-  padding-top: rem(75);
+  padding-top: rem(25);
   display: flex;
   flex-direction: column;
   align-items: center;
   @include mq("md") {
     flex: 1;
-    padding-top: rem(148);
+    padding-top: rem(73);
     padding-bottom: rem(115);
     align-items: flex-end;
   }

@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.lesson-list {
+  margin-top: rem(6);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lesson-list__item {
+}
+
+.lesson-list__item:first-child::before {
+  content: "・";
+}
+
+.lesson-list__item:not(:last-child):after {
+  content: "／";
+}

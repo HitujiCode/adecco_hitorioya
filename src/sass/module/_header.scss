@@ -14,7 +14,6 @@
 .header__inner {
   background-color: rgba($white, 0.9);
   padding-left: rem(10);
-  // padding-right: min(calc(28 / 1400 * 100vw), 28px);
   height: inherit;
   display: flex;
   align-items: center;
@@ -23,10 +22,7 @@
   filter: drop-shadow(0 0 9px #00000029);
   transition: background-color 0.3s;
   @include mq("md") {
-    padding-right: min(calc(10 / 1400 * 100vw), 10px);
-  }
-  @include mq("xl") {
-    padding-right: min(calc(28 / 1400 * 100vw), 28px);
+    padding-right: rem(28);
   }
 }
 
@@ -34,7 +30,7 @@
   width: rem(98);
   height: inherit;
   @include mq("md") {
-    width: min(calc(128 / 1400 * 100vw), 128px);
+    width: rem(128);
   }
 }
 
@@ -60,8 +56,8 @@
   align-items: center;
   gap: rem(10);
   @include mq("md") {
-    margin-left: min(calc(20 / 1400 * 100vw), 20px);
-    gap: min(calc(20 / 1400 * 100vw), 20px);
+    margin-left: rem(20);
+    gap: rem(20);
   }
 }
 
@@ -70,7 +66,7 @@
   height: inherit;
   @include mq("md") {
     max-width: rem(55);
-    width: calc(55 / 1400 * 100vw);
+    // width: calc(55 / 1400 * 100vw);
   }
 }
 
@@ -84,9 +80,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  @include mq("md") {
-    // aspect-ratio: 55/14;
-  }
 }
 
 .header__banner02 {
@@ -94,7 +87,7 @@
   height: inherit;
   @include mq("md") {
     max-width: rem(91);
-    width: calc(91 / 1400 * 100vw);
+    // width: calc(91 / 1400 * 100vw);
   }
 }
 
@@ -109,7 +102,7 @@
   height: inherit;
   @include mq("md") {
     max-width: rem(91);
-    width: calc(91 / 1400 * 100vw);
+    // width: calc(91 / 1400 * 100vw);
   }
 }
 
@@ -137,11 +130,6 @@
 .header__nav-list {
   display: flex;
   height: inherit;
-  @include mq("md") {
-  }
-  @include mq("xl") {
-    // padding-inline: calc(30 / 1400 * 100vw);
-  }
 }
 
 .header__nav-item {
@@ -158,7 +146,7 @@
   font-weight: $medium;
   line-height: 1;
   position: relative;
-  padding-inline: min(calc(15 / 1400 * 100vw), 15px);
+  padding-inline: rem(15);
   transition: color 0.3s;
 }
 
@@ -188,12 +176,7 @@
   height: inherit;
   display: flex;
   align-items: center;
-  @include mq("xl") {
-    margin-left: min(calc(13 / 1400 * 100vw), 13px);
-  }
-  @include mq("md") {
-    margin-left: 0;
-  }
+  margin-left: rem(13);
 }
 
 .header__nav-contact a {
@@ -207,7 +190,7 @@
   padding-top: rem(14);
   padding-bottom: rem(15);
   border-radius: 28px;
-  padding-inline: min(calc(19 / 1400 * 100vw), 19px);
+  padding-inline: rem(19);
   transition: background-color 0.3s;
 }
 

@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.button-other {
+  position: relative;
+  display: inline-block;
+  background-color: $white;
+  border-radius: 44px;
+  padding-top: rem(15);
+  padding-inline: rem(28);
+  padding-bottom: rem(16);
+  text-align: center;
+  max-width: rem(300);
+  width: 100%;
+  font-size: rem(14);
+  font-weight: $semi-bold;
+  color: $rose;
+  line-height: 1;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  @include mq("md") {
+    max-width: rem(326);
+    font-size: rem(17);
+    padding-top: rem(25);
+    padding-inline: rem(42);
+    padding-bottom: rem(26);
+  }
+}
+
+.button-other::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(22);
+  transform: translateY(-50%);
+  width: rem(7);
+  height: rem(12);
+  background-color: $rose;
+  mask-image: url("../../assets/images/icon-arrow.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  transition: background-color 0.3s;
+  @include mq("md") {
+    width: rem(11);
+    height: rem(19);
+    right: rem(30);
+  }
+}
+
+.button-other span {
+  position: relative;
+  padding-right: rem(30);
+}
+
+.button-other span::after {
+  // content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: rem(7);
+  height: rem(12);
+  background-color: $rose;
+  mask-image: url("../../assets/images/icon-arrow.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  @include mq("md") {
+    width: rem(11);
+    height: rem(19);
+  }
+}
+
+.button-other.is-current {
+  background-color: $lightgray;
+}
+
+@media (any-hover: hover) {
+  .button-other:hover {
+    background-color: $blue;
+    color: $white;
+  }
+
+  .button-other:hover::after {
+    background-color: $white;
+  }
+}

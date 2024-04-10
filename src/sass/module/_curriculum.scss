@@ -1,0 +1,92 @@
+@use "global" as *;
+
+.curriculum {
+  @include mq("md") {
+    padding-left: rem(88);
+    position: relative;
+  }
+}
+
+.curriculum__title {
+  text-align: center;
+  font-weight: $bold;
+  font-family: $second-font;
+  line-height: 1;
+  padding-bottom: rem(18);
+  border-bottom: 1px dashed $black;
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.curriculum__title-num {
+  font-size: rem(26);
+  @include mq("md") {
+    position: absolute;
+    top: rem(-10);
+    left: rem(10);
+    font-size: rem(62);
+  }
+}
+
+.curriculum__title-num::after {
+  content: counter(curriculumNom);
+}
+
+.curriculum__title-main {
+  margin-top: rem(10);
+  font-size: rem(20);
+  color: $blue;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.curriculum__title-main span {
+  display: inline-block;
+}
+
+.curriculum__title-sub {
+  margin-top: rem(10);
+  font-size: rem(13);
+  @include mq("md") {
+    margin-top: 0;
+    font-size: rem(17);
+  }
+}
+
+.curriculum__text {
+  margin-top: rem(16);
+  font-size: rem(14);
+  line-height: 2;
+  text-align: justify;
+  @include mq("md") {
+    margin-top: rem(20);
+    font-size: rem(17);
+  }
+}
+
+.curriculum__list {
+  margin-top: rem(6);
+}
+
+.curriculum__term {
+  font-size: rem(14);
+  line-height: 1;
+  @include mq("md") {
+    font-size: rem(17);
+    line-height: calc(25 / 17);
+  }
+}
+
+.curriculum__item {
+  font-size: rem(14);
+  line-height: 2;
+  @include mq("md") {
+    font-size: rem(17);
+    line-height: calc(25 / 17);
+  }
+}

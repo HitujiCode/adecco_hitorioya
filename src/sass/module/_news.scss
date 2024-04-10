@@ -15,57 +15,15 @@
 .news__head {
 }
 
-.news__link {
-  margin-top: rem(20);
-  text-align: right;
-  line-height: 1;
-  @include mq("md") {
-    margin-top: 0;
-  }
-}
-
-.news__link a {
-  position: relative;
-  padding-right: rem(13);
-  font-size: rem(12);
-  font-weight: $bold;
-  font-family: $second-font;
-  color: $rose;
-  line-height: 1;
-  display: inline-block;
-  @include mq("md") {
-    padding-right: rem(18);
-    font-size: rem(16);
-  }
-}
-
-.news__link a::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: rem(4);
-  height: rem(7);
-  background-image: url("../../assets/images/icon-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  @include mq("md") {
-    width: rem(6);
-    height: rem(11);
-  }
-}
-
 .news__list {
-  margin-top: rem(8);
+  margin-top: rem(40);
   padding-top: rem(6);
   padding-inline: rem(15);
   padding-bottom: rem(10);
   background-color: $white;
   border-radius: 15px;
   @include mq("md") {
-    margin-top: rem(20);
+    margin-top: rem(40);
     border-radius: 30px;
     padding-top: rem(20);
     padding-inline: rem(50);

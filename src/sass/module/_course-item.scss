@@ -3,6 +3,7 @@
 .course-item {
   display: flex;
   flex-direction: column;
+  // align-items: flex-start;
   padding-top: rem(20);
   padding-bottom: rem(18);
   padding-inline: rem(17);
@@ -19,6 +20,10 @@
     transition: background-color 0.3s;
     border-width: 5px;
     border-radius: 0 0 20px 20px;
+    //subgridの場合
+    // display: inherit;
+    // grid-template-rows: inherit;
+    // grid-row: inherit;
   }
 }
 
@@ -45,9 +50,10 @@
 
 .course-item__label-num {
   display: inline-block;
-  margin-left: rem(6);
   font-size: rem(21);
   color: $blue;
+  position: relative;
+  top: rem(-1);
   @include mq("md") {
     font-size: rem(25);
   }
@@ -84,6 +90,7 @@
   @include mq("md") {
     border-radius: 20px;
     margin-top: rem(15);
+    height: fit-content;
   }
 }
 
@@ -91,7 +98,7 @@
   border-radius: 10px;
   aspect-ratio: 310/172;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   transition: transform 0.3s;
   @include mq("md") {
@@ -115,8 +122,12 @@
   }
 }
 
+.course-item__job span {
+  display: inline-block;
+}
+
 .course-item__read {
-  flex-grow: 1;
+  flex-grow: 1; //subgridなら削除
   margin-top: rem(7);
   font-size: rem(15);
   font-weight: $bold;
@@ -126,6 +137,8 @@
   @include mq("md") {
     margin-top: rem(15);
     font-size: rem(16);
+    overflow-wrap: anywhere;
+    word-break: keep-all;
   }
 }
 
@@ -181,6 +194,7 @@
   line-height: calc(25 / 14);
   @include mq("md") {
     font-size: clamp(10px, calc(14 / 1400 * 100vw), 14px);
+    font-feature-settings: "palt";
   }
 }
 
