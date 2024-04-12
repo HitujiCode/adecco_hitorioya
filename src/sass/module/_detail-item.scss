@@ -17,14 +17,31 @@
   }
 }
 
+.detail-item--small {
+  @extend .detail-item;
+}
+
 .detail-item__head {
   font-size: rem(17);
   font-weight: $bold;
   font-family: $second-font;
   line-height: 1;
   text-align: center;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
   @include mq("md") {
     font-size: rem(20);
+    font-feature-settings: "palt";
+    letter-spacing: -0.05em;
+    font-size: rem(18);
+  }
+}
+
+.detail-item--small .detail-item__head {
+  @include mq("md") {
+    font-feature-settings: "palt";
+    letter-spacing: -0.05em;
+    font-size: rem(18);
   }
 }
 
