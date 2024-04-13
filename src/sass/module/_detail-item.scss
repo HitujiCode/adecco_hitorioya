@@ -38,6 +38,7 @@
 }
 
 .detail-item--small .detail-item__head {
+  line-height: 1.2;
   @include mq("md") {
     font-feature-settings: "palt";
     letter-spacing: -0.05em;
