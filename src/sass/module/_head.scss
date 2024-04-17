@@ -41,3 +41,22 @@
   background-color: $rose;
   left: rem(3);
 }
+
+.head--blue {
+  @extend .head;
+  letter-spacing: 0;
+  @include mq("md") {
+    font-size: rem(26);
+    color: $black2;
+    letter-spacing: 0;
+    padding-left: rem(18);
+  }
+}
+
+.head--blue::before {
+  background-color: $blue;
+  @include mq("md") {
+    width: rem(7);
+    height: rem(24);
+  }
+}

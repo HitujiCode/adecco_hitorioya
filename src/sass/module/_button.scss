@@ -115,7 +115,8 @@
     filter: brightness(0) invert(1);
   }
 
-  .button--entry:hover {
+  .button--entry:hover,
+  .button--entry-small:hover {
     background-color: $blue;
   }
 }

@@ -3,6 +3,10 @@
 .flow {
 }
 
+.flow--company {
+  @extend .flow;
+}
+
 .flow__inner.inner--small {
 }
 
@@ -12,11 +16,23 @@
 .flow__head {
 }
 
+.flow--company .flow__head {
+  display: flex;
+  justify-content: center;
+}
+
 .flow__list {
   counter-reset: flowNum;
   margin-top: rem(30);
   @include mq("md") {
     margin-top: rem(55);
+  }
+}
+
+.flow--company .flow__list {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(60);
   }
 }
 
@@ -30,4 +46,15 @@
   @include mq("md") {
     margin-top: rem(64);
   }
+}
+
+.flow--company .flow__item + .flow__item {
+  @include mq("md") {
+    margin-top: rem(56);
+  }
+}
+
+.flow__button {
+  margin-top: rem(64);
+  text-align: center;
 }

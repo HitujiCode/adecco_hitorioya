@@ -31,7 +31,7 @@
 }
 
 .header--company .header__inner {
-  padding-inline: rem(10);
+  padding-inline: rem(5);
   @include mq("md") {
     padding-inline: rem(20);
   }
@@ -70,6 +70,10 @@
     margin-left: rem(20);
     gap: rem(20);
   }
+}
+
+.header--company .header__banners {
+  margin-left: rem(5);
 }
 
 .header__banner01 {
@@ -210,9 +214,20 @@
 }
 
 .header--company .header__nav-contact a {
-  padding-top: rem(16);
-  padding-bottom: rem(17);
-  padding-inline: rem(24);
+  display: none;
+  // padding-top: rem(4);
+  // padding-bottom: rem(6);
+  // padding-inline: rem(5);
+  // font-size: rem(11);
+  // text-align: center;
+  // line-height: 1.1;
+  // border-radius: 20px;
+  @include mq("md") {
+    display: block;
+    padding-top: rem(16);
+    padding-bottom: rem(17);
+    padding-inline: rem(24);
+  }
 }
 
 .header__nav-contact a::after {

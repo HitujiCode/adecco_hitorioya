@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.layout-company-footer {
+  margin-top: rem(185);
+  padding-bottom: rem(25);
+  @include mq("md") {
+    margin-top: rem(125);
+    padding-bottom: rem(42);
+  }
+}

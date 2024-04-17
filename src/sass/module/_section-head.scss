@@ -50,7 +50,8 @@
 }
 
 .section-head--vertical,
-.section-head--vertical3 {
+.section-head--vertical3,
+.section-head--vertical4 {
   @extend .section-head;
   flex-direction: column;
   gap: rem(8);
@@ -69,17 +70,20 @@
 }
 
 .section-head--vertical .section-head__main,
-.section-head--vertical3 .section-head__main {
+.section-head--vertical3 .section-head__main,
+.section-head--vertical4 .section-head__main {
   order: 2;
 }
 
 .section-head--vertical .section-head__sub,
-.section-head--vertical3 .section-head__sub {
+.section-head--vertical3 .section-head__sub,
+.section-head--vertical4 .section-head__sub {
   order: 1;
 }
 
 .section-head--vertical::before,
-.section-head--vertical3::before {
+.section-head--vertical3::before,
+.section-head--vertical4::before {
   left: 50%;
   transform: translateX(-50%);
   width: rem(38);
@@ -104,5 +108,18 @@
   width: rem(38);
   @include mq("md") {
     width: rem(61);
+  }
+}
+
+.section-head--vertical4 {
+  text-align: center;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+}
+
+.section-head--vertical4 .section-head__main {
+  line-height: 1.1;
+  @include mq("md") {
+    letter-spacing: 0.05em;
   }
 }
