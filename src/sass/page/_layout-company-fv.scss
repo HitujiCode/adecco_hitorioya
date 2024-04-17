@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.layout-company-fv {
+  padding-top: rem(50);
+  @include mq("md") {
+    padding-top: rem(75);
+  }
+}

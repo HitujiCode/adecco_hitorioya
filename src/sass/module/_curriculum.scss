@@ -27,6 +27,13 @@
   }
 }
 
+.curriculum__title--long {
+  @extend .curriculum__title;
+  @include mq("md") {
+    align-items: center;
+  }
+}
+
 .curriculum__title-num {
   font-size: rem(26);
   @include mq("md") {
@@ -52,6 +59,13 @@
   }
 }
 
+.curriculum__title--long .curriculum__title-main {
+  @include mq("md") {
+    text-align: left;
+    line-height: 1.2;
+  }
+}
+
 .curriculum__title-main span {
   display: inline-block;
 }
@@ -62,6 +76,12 @@
   @include mq("md") {
     margin-top: 0;
     font-size: rem(17);
+  }
+}
+
+.curriculum__title--long .curriculum__title-sub {
+  @include mq("md") {
+    flex-shrink: 0;
   }
 }
 

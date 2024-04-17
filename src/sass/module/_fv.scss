@@ -303,10 +303,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 63% 5px;
+  object-position: 63% center;
   @include mq("md") {
     aspect-ratio: 658/874;
-    object-position: 47% 5px;
+    object-position: 47% center;
   }
 }
 

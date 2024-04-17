@@ -47,7 +47,8 @@
   }
 }
 
-.button--entry {
+.button--entry,
+.button--entry-small {
   @extend .button;
   background-color: $rose;
   font-size: rem(18);
@@ -67,20 +68,39 @@
   }
 }
 
-.button--entry span {
+.button--entry-small {
+  max-width: rem(310);
+  border-radius: 44px;
+  @include mq("md") {
+    font-size: rem(24);
+    padding-block: rem(15);
+    max-width: rem(310);
+  }
+}
+
+.button--entry span,
+.button--entry-small span {
   color: $white;
   @include mq("md") {
     padding-right: rem(20);
   }
 }
 
-.button--entry span::after {
+.button--entry span::after,
+.button--entry-small span::after {
   filter: brightness(0) invert(1);
   width: rem(8);
   height: rem(14);
   @include mq("md") {
     width: rem(10);
     height: rem(18);
+  }
+}
+
+.button--entry-small span::after {
+  @include mq("md") {
+    width: rem(12);
+    height: rem(20);
   }
 }
 
