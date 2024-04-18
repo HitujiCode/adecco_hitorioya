@@ -14,6 +14,14 @@
   }
 }
 
+.cta--company {
+  @extend .cta;
+  display: block;
+  @include mq("md") {
+    display: none;
+  }
+}
+
 .cta a {
   display: inline-block;
   font-size: rem(10);
