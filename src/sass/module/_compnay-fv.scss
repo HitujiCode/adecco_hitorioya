@@ -147,19 +147,26 @@
   font-weight: $bold;
   font-family: $second-font;
   color: $white;
-  writing-mode: vertical-lr;
   line-height: 1;
-  text-align: center;
   background-color: $blue;
   border-radius: 15px;
   padding-top: rem(5);
   padding-bottom: rem(6);
   padding-inline: rem(8);
+  position: relative;
   @include mq("md") {
     font-size: rem(20);
     writing-mode: initial;
     border-radius: 20px;
     padding-inline: rem(16);
+  }
+}
+
+.company-fv__box-tag span {
+  display: inline-block;
+  width: rem(15);
+  @include mq("md") {
+    display: contents;
   }
 }
 
