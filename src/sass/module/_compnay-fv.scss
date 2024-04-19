@@ -46,7 +46,7 @@
 }
 
 .company-fv__read {
-  font-size: rem(18);
+  font-size: rem(17);
   font-weight: $bold;
   font-family: $second-font;
   color: $black2;
@@ -59,6 +59,10 @@
 }
 
 .company-fv__read span {
+  display: inline-block;
+}
+
+.company-fv__color {
   color: $rose;
 }
 
